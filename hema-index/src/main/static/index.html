@@ -30,47 +30,23 @@
                     <div class="row">
                         <!-- Header Language -->
                         <div class="col-xs-12 col-sm-6">
-                            <div class="dropdown block-language-wrapper">
-                                <a role="button" data-toggle="dropdown" data-target="#" class="block-language dropdown-toggle" href="#"><img src="picture/english.png" alt="English" />English<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li role="presentation"><a href="#"><img src="picture/english.png" alt="English" />English</a></li>
-                                    <li role="presentation"><a href="#"><img src="picture/francais.png" alt="French" />French</a></li>
-                                    <li role="presentation"><a href="#"><img src="picture/german.png" alt="German" />German</a></li>
-                                </ul>
-                            </div>
-                            <!-- End Header Language -->
-                            <!-- Header Currency -->
-                            <div class="dropdown block-currency-wrapper">
-                                <a role="button" data-toggle="dropdown" data-target="#" class="block-currency dropdown-toggle" href="#">USD<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li role="presentation"><a href="#">$ - Dollar</a></li>
-                                    <li role="presentation"><a href="#">&pound; - Pound</a></li>
-                                    <li role="presentation"><a href="#">€ - Euro</a></li>
-                                </ul>
-                            </div>
-                            <!-- End Header Currency -->
-                            <div class="welcome-msg">
-                                Default welcome msg!
-                            </div>
+
+                            <!-- 去除币种类  语言选择 -->
+
+
                         </div>
                         <div class="col-xs-6 hidden-xs">
                             <!-- Header Top Links -->
                             <div class="toplinks">
                                 <div class="links">
                                     <div class="myaccount">
-                                        <a href="login.html"><span class="hidden-xs">My Account</span></a>
+                                        <a href="login.html"><span class="hidden-xs">我的账户</span></a>
                                     </div>
                                     <div class="block-company-wrapper">
-                                        <a href="#"><span class="hidden-xs">Track Order</span></a>
-                                    </div>
-                                    <div class="check">
-                                        <a href="checkout.html"><span class="hidden-xs">Checkout</span></a>
-                                    </div>
-                                    <div class="demo">
-                                        <a href="blog.html"><span class="hidden-xs">Blog</span></a>
+                                        <a href="#"><span class="hidden-xs">我的订单</span></a>
                                     </div>
                                     <div class="login">
-                                        <a href="login.html"><span class="hidden-xs">Log In</span></a>
+                                        <a href="login.html"><span class="hidden-xs">登陆</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -88,22 +64,30 @@
                         </div>
                         <!-- End Logo -->
                     </div>
+
+                    <!-- 上方搜索框 -->
                     <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 hidden-xs">
                         <div class="search-box">
                             <form action="cat" method="POST" id="search_mini_form" name="Categories">
-                                <input type="text" placeholder="Search here..." maxlength="70" name="search" id="search" />
+                                <input type="text" placeholder="查找更多..." maxlength="70" name="search" id="search" />
                                 <button type="button" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
                             </form>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 mgk-top-cart">
+                        <!-- 对比 -->
                         <a href="compare.html" class="top-link-compare hidden-xs"><i class="compare"></i></a>
+                        <!-- 我的收藏 -->
                         <a href="wishlist.html" class="top-link-wishlist hidden-xs"><i class="fa fa-heart"></i></a>
                         <div class="top-cart-contain pull-right">
+
+
                             <!-- Top Cart -->
+                            <!-- 购物车 -->
                             <div class="mini-cart">
                                 <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
-                                    <a href="shopping_cart.html"><span class="cart_count">3</span><span class="cart-title hidden-xs hidden-sm">My Cart /</span><span class="price hidden-xs">$259.00</span></a>
+                                    <a href="shopping_cart.html"><span class="cart_count">3</span><span class="cart-title hidden-xs hidden-sm">我的 car/</span>
+                                        <span class="price hidden-xs">￥金额</span></a>
                                 </div>
                                 <div>
                                     <div class="top-cart-content">
@@ -171,28 +155,14 @@
                         <span class="mm-label">Menu</span>
                     </div>
                 </div>
+
+                <!--  头部导航栏  -->
                 <div class="nav-inner">
                     <ul id="nav" class="hidden-xs">
-                        <li class="level0 parent drop-menu" id="nav-home"><a href="index.html" class="level-top"><span>Home</span></a>
-                            <ul class="level1">
-                                <li class="level1"><a href="newsletter.html"><span>Fruit Store</span></a></li>
-                            </ul></li>
-                        <li class="level0 nav-6 level-top drop-menu"><a class="level-top" href="#"><span>Pages</span></a>
-                            <ul class="level1">
-                                <li class="level2"><a href="grid.html"><span>Shop Grid</span></a></li>
-                                <li class="level2"><a href="list.html"><span>Shop List</span></a></li>
-                                <li class="level2"><a href="product_detail.html"><span>Product Detail</span></a></li>
-                                <li class="level2"><a href="shopping_cart.html"><span>Shopping Cart</span></a></li>
-                                <li class="level2"><a href="checkout.html"><span>Checkout</span></a></li>
-                                <li class="level2"><a href="wishlist.html"><span>Wishlist</span></a></li>
-                                <li class="level2"><a href="dashboard.html"><span>Dashboard</span></a></li>
-                                <li class="level2"><a href="multiple_addresses.html"><span>Multiple Addresses</span></a></li>
-                                <li class="level2"><a href="compare.html"><span>Compare</span></a></li>
-                                <li class="level2"><a href="quick_view.html"><span>Quick View</span></a></li>
-                                <li class="level2"><a href="newsletter.html"><span>Newsletter</span></a></li>
-                                <li class="level2"><a href="404error.html"><span>404 Error Page</span></a></li>
-                            </ul></li>
-                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>Vegetables</span></a>
+                        <li class="level0 parent drop-menu" id="nav-home"><a href="index.html" class="level-top"><span>我的</span></a></li>
+
+                        <!--  蔬菜  -->
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>蔬菜</span></a>
                             <div class="level0-wrapper dropdown-6col">
                                 <div class="container">
                                     <div class="level0-wrapper2">
@@ -257,7 +227,7 @@
                                     </div>
                                 </div>
                             </div></li>
-                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>Fruits</span></a>
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>水果</span></a>
                             <div class="level0-wrapper dropdown-6col">
                                 <div class="container">
                                     <div class="level0-wrapper2">
@@ -317,7 +287,7 @@
                                     </div>
                                 </div>
                             </div></li>
-                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>Organic Fruits</span></a>
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>进口水果</span></a>
                             <div class="level0-wrapper dropdown-6col">
                                 <div class="container">
                                     <div class="level0-wrapper2">
@@ -370,7 +340,8 @@
                                     </div>
                                 </div>
                             </div></li>
-                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>Sprouts</span></a>
+
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>肉类</span></a>
                             <div class="level0-wrapper dropdown-6col">
                                 <div class="container">
                                     <div class="level0-wrapper2">
@@ -412,42 +383,67 @@
                                     </div>
                                 </div>
                             </div></li>
-                        <li class="mega-menu"><a class="level-top" href="about_us.html"><span>About us</span></a></li>
-                        <li class="nav-custom-link mega-menu"><a href="#" class="level-top"><span>Custom</span></a>
-                            <div class="level0-wrapper custom-menu">
+
+
+
+
+
+
+
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>水产</span></a>
+                            <div class="level0-wrapper dropdown-6col">
                                 <div class="container">
-                                    <div class="header-nav-dropdown-wrapper">
-                                        <div class="grid12-3">
-                                            <h4 class="heading">48 Hours Only!</h4>
-                                            <p>Lorem ipsum dolor sit amet, gravida dui maecenas dis semper, imperdiet eget duis nulla lectus ut.</p>
-                                            <div>
-                                                <img src="picture/custom-img1.jpg" alt="48 Hours Only!" />
-                                            </div>
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
+                                            <ul class="level0">
+                                                <li class="level3 parent item"><a href="grid.html"><span>Brussels0</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Racks &amp; Cabinets</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Sofas</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Chairs</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Tables</span></a></li>
+                                                    </ul></li>
+
+                                            </ul>
                                         </div>
-                                        <div class="grid12-3">
-                                            <h4 class="heading">Sale 50% Off</h4>
-                                            <p>Lorem ipsum dolor sit amet, gravida dui maecenas dis semper, imperdiet eget duis nulla lectus ut.</p>
-                                            <div>
-                                                <img src="picture/custom-img2.jpg" alt="Sale 50% Off" />
-                                            </div>
-                                        </div>
-                                        <div class="grid12-3">
-                                            <h4 class="heading">Organic Products</h4>
-                                            <p>Lorem ipsum dolor sit amet, gravida dui maecenas dis semper, imperdiet eget duis nulla lectus ut.</p>
-                                            <div>
-                                                <img src="picture/custom-img3.jpg" alt="Organic Products" />
-                                            </div>
-                                        </div>
-                                        <div class="grid12-3">
-                                            <h4 class="heading">Best Sellers!</h4>
-                                            <p>Lorem ipsum dolor sit amet, gravida dui maecenas dis semper, imperdiet eget duis nulla lectus ut.</p>
-                                            <div>
-                                                <img src="picture/custom-img4.jpg" alt="Best Sellers!" />
-                                            </div>
+                                        <div class="nav-block nav-block-right std grid12-4">
+                                            <img src="picture/sprouts-banner.png" alt="Sprouts" />
                                         </div>
                                     </div>
                                 </div>
                             </div></li>
+
+
+
+
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>粮油</span></a>
+                            <div class="level0-wrapper dropdown-6col">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
+                                            <ul class="level0">
+                                                <li class="level3 parent item"><a href="grid.html"><span>Brussels0</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Racks &amp; Cabinets</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Sofas</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Chairs</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Tables</span></a></li>
+                                                    </ul></li>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="nav-block nav-block-right std grid12-4">
+                                            <img src="picture/sprouts-banner.png" alt="Sprouts" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+
+
+
+
+
                     </ul>
                 </div>
             </div>
