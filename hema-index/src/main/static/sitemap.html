@@ -1,0 +1,925 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicons Icon -->
+    <title>Brezza - Fruit Store Multipurpose HTML Template</title>
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/revslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link href="css/ac2ae5775c664fb682a6b10e460efad2.css" rel="stylesheet" />
+</head>
+<body class="sitemap-page">
+<div id="page">
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- Header Language -->
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="dropdown block-language-wrapper">
+                                <a role="button" data-toggle="dropdown" data-target="#" class="block-language dropdown-toggle" href="#"><img src="picture/english.png" alt="English" />English<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation"><a href="#"><img src="picture/english.png" alt="English" />English</a></li>
+                                    <li role="presentation"><a href="#"><img src="picture/francais.png" alt="French" />French</a></li>
+                                    <li role="presentation"><a href="#"><img src="picture/german.png" alt="German" />German</a></li>
+                                </ul>
+                            </div>
+                            <!-- End Header Language -->
+                            <!-- Header Currency -->
+                            <div class="dropdown block-currency-wrapper">
+                                <a role="button" data-toggle="dropdown" data-target="#" class="block-currency dropdown-toggle" href="#">USD<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation"><a href="#">$ - Dollar</a></li>
+                                    <li role="presentation"><a href="#">&pound; - Pound</a></li>
+                                    <li role="presentation"><a href="#">€ - Euro</a></li>
+                                </ul>
+                            </div>
+                            <!-- End Header Currency -->
+                            <div class="welcome-msg">
+                                Default welcome msg!
+                            </div>
+                        </div>
+                        <div class="col-xs-6 hidden-xs">
+                            <!-- Header Top Links -->
+                            <div class="toplinks">
+                                <div class="links">
+                                    <div class="myaccount">
+                                        <a href="login.html"><span class="hidden-xs">My Account</span></a>
+                                    </div>
+                                    <div class="block-company-wrapper">
+                                        <a href="#"><span class="hidden-xs">Track Order</span></a>
+                                    </div>
+                                    <div class="check">
+                                        <a href="checkout.html"><span class="hidden-xs">Checkout</span></a>
+                                    </div>
+                                    <div class="demo">
+                                        <a href="blog.html"><span class="hidden-xs">Blog</span></a>
+                                    </div>
+                                    <div class="login">
+                                        <a href="login.html"><span class="hidden-xs">Log In</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Header Top Links -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo-block">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a title="Brezza" href="index.html"><img alt="Brezza Logo" src="picture/logo.png" /></a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+                    <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+                        <div class="search-box">
+                            <form action="cat" method="POST" id="search_mini_form" name="Categories">
+                                <input type="text" placeholder="Search here..." maxlength="70" name="search" id="search" />
+                                <button type="button" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 mgk-top-cart">
+                        <a href="compare.html" class="top-link-compare hidden-xs"><i class="compare"></i></a>
+                        <a href="wishlist.html" class="top-link-wishlist hidden-xs"><i class="fa fa-heart"></i></a>
+                        <div class="top-cart-contain pull-right">
+                            <!-- Top Cart -->
+                            <div class="mini-cart">
+                                <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+                                    <a href="shopping_cart.html"><span class="cart_count">3</span><span class="cart-title hidden-xs hidden-sm">My Cart /</span><span class="price hidden-xs">$259.00</span></a>
+                                </div>
+                                <div>
+                                    <div class="top-cart-content">
+                                        <ul class="mini-products-list" id="cart-sidebar">
+                                            <li class="item">
+                                                <div class="item-inner">
+                                                    <a class="product-image" title="Retis lapen casen" href="shopping_cart.html"><img alt="Retis lapen casen" src="picture/product4.jpg" /></a>
+                                                    <div class="product-details">
+                                                        <div class="access">
+                                                            <a class="btn-remove1" title="Remove This Item" href="#">Remove</a>
+                                                            <a class="btn-edit" title="Edit item" href="#"><i class="fa fa-pencil"></i><span class="hidden">Edit item</span></a>
+                                                        </div>
+                                                        <strong>1</strong>x
+                                                        <span class="price">$310.99</span>
+                                                        <p class="product-name"><a href="shopping_cart.html">Retis lapen casen</a></p>
+                                                    </div>
+                                                </div></li>
+                                            <li class="item">
+                                                <div class="item-inner">
+                                                    <a class="product-image" title="Retis lapen casen" href="shopping_cart.html"><img alt="Retis lapen casen" src="picture/product3.jpg" /></a>
+                                                    <div class="product-details">
+                                                        <div class="access">
+                                                            <a class="btn-remove1" title="Remove This Item" href="#">Remove</a>
+                                                            <a class="btn-edit" title="Edit item" href="#"><i class="fa fa-pencil"></i><span class="hidden">Edit item</span></a>
+                                                        </div>
+                                                        <strong>1</strong>x
+                                                        <span class="price">$80.00</span>
+                                                        <p class="product-name"><a href="shopping_cart.html">Retis lapen casen</a></p>
+                                                    </div>
+                                                </div></li>
+                                            <li class="item">
+                                                <div class="item-inner">
+                                                    <a class="product-image" title="Retis lapen casen" href="shopping_cart.html"><img alt="Retis lapen casen" src="picture/product4.jpg" /></a>
+                                                    <div class="product-details">
+                                                        <div class="access">
+                                                            <a class="btn-remove1" title="Remove This Item" href="#">Remove</a>
+                                                            <a class="btn-edit" title="Edit item" href="#"><i class="fa fa-pencil"></i><span class="hidden">Edit item</span></a>
+                                                        </div>
+                                                        <strong>1</strong>x
+                                                        <span class="price">$51.00</span>
+                                                        <p class="product-name"><a href="shopping_cart.html">Retis lapen casen</a></p>
+                                                    </div>
+                                                </div></li>
+                                        </ul>
+                                        <div class="actions">
+                                            <button class="btn-checkout" type="button" onclick="location.href='checkout.html';"><i class="fa fa-check"></i><span>Checkout</span></button>
+                                            <a href="shopping_cart.html" class="view-cart"><i class="fa fa-shopping-cart"></i><span>View Cart</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Top Cart -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="mm-toggle-wrap">
+                    <div class="mm-toggle">
+                        <i class="fa fa-align-justify"></i>
+                        <span class="mm-label">Menu</span>
+                    </div>
+                </div>
+                <div class="nav-inner">
+                    <ul id="nav" class="hidden-xs">
+                        <li class="level0 parent drop-menu" id="nav-home"><a href="index.html" class="level-top"><span>Home</span></a>
+                            <ul class="level1">
+                                <li class="level1"><a href="newsletter.html"><span>Fruit Store</span></a></li>
+                            </ul></li>
+                        <li class="level0 nav-6 level-top drop-menu"><a class="level-top" href="#"><span>Pages</span></a>
+                            <ul class="level1">
+                                <li class="level2"><a href="grid.html"><span>Shop Grid</span></a></li>
+                                <li class="level2"><a href="list.html"><span>Shop List</span></a></li>
+                                <li class="level2"><a href="product_detail.html"><span>Product Detail</span></a></li>
+                                <li class="level2"><a href="shopping_cart.html"><span>Shopping Cart</span></a></li>
+                                <li class="level2"><a href="checkout.html"><span>Checkout</span></a></li>
+                                <li class="level2"><a href="wishlist.html"><span>Wishlist</span></a></li>
+                                <li class="level2"><a href="dashboard.html"><span>Dashboard</span></a></li>
+                                <li class="level2"><a href="multiple_addresses.html"><span>Multiple Addresses</span></a></li>
+                                <li class="level2"><a href="compare.html"><span>Compare</span></a></li>
+                                <li class="level2"><a href="quick_view.html"><span>Quick View</span></a></li>
+                                <li class="level2"><a href="newsletter.html"><span>Newsletter</span></a></li>
+                                <li class="level2"><a href="404error.html"><span>404 Error Page</span></a></li>
+                            </ul></li>
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>Vegetables</span></a>
+                            <div class="level0-wrapper dropdown-6col">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center">
+                                            <ul class="level0">
+                                                <li class="level3 parent item"><a href="grid.html"><span>Leaf</span></a>
+                                                    <ul class="level1">
+                                                        <li><a href="grid.html"><span>Spinach</span></a></li>
+                                                        <li><a href="grid.html"><span>Spring Onion</span></a></li>
+                                                        <li><a href="grid.html"><span>Cabbage</span></a></li>
+                                                        <li><a href="grid.html"><span>Lettuce</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Root</span></a>
+                                                    <ul class="level1">
+                                                        <li><a href="grid.html"><span>Carrots</span></a></li>
+                                                        <li><a href="grid.html"><span>Beets</span></a></li>
+                                                        <li><a href="grid.html"><span>Potato</span></a></li>
+                                                        <li><a href="grid.html"><span>Radishes</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Pod</span></a>
+                                                    <ul class="level1">
+                                                        <li><a href="grid.html"><span>Peas</span></a></li>
+                                                        <li><a href="grid.html"><span>Green beans</span></a></li>
+                                                        <li><a href="grid.html"><span>Wax beans</span></a></li>
+                                                        <li><a href="grid.html"><span>Runner beans</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Fruit</span></a>
+                                                    <ul class="level1">
+                                                        <li><a href="grid.html"><span>Tomato</span></a></li>
+                                                        <li><a href="grid.html"><span>Pumpkin</span></a></li>
+                                                        <li><a href="grid.html"><span>Cucumber</span></a></li>
+                                                        <li><a href="grid.html"><span>Squash</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Bulb</span></a>
+                                                    <ul class="level1">
+                                                        <li><a href="grid.html"><span>Artichokes</span></a></li>
+                                                        <li><a href="grid.html"><span>Cauliflower</span></a></li>
+                                                        <li><a href="grid.html"><span>Asparagus</span></a></li>
+                                                        <li><a href="grid.html"><span>Broccoli</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Flower</span></a>
+                                                    <ul class="level1">
+                                                        <li><a href="grid.html"><span>Garlic</span></a></li>
+                                                        <li><a href="grid.html"><span>Onions</span></a></li>
+                                                        <li><a href="grid.html"><span>Chives</span></a></li>
+                                                        <li><a href="grid.html"><span>Leeks</span></a></li>
+                                                    </ul></li>
+                                            </ul>
+                                        </div>
+                                        <div class="nav-add">
+                                            <div class="push_item">
+                                                <div class="push_img">
+                                                    <a href="#"><img src="picture/mega-sale.png" alt="Mega Sale" /></a>
+                                                </div>
+                                            </div>
+                                            <div class="push_item push_item_last">
+                                                <div class="push_img">
+                                                    <a href="#"><img src="picture/end-of-season.png" alt="End of Season" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>Fruits</span></a>
+                            <div class="level0-wrapper dropdown-6col">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center">
+                                            <div class="col-1">
+                                                <ul class="level0">
+                                                    <li class="level3 parent item"><a href="grid.html"><span>Seasonal Fruits</span></a>
+                                                        <ul class="level1">
+                                                            <li><a href="grid.html"><span>Mango</span></a></li>
+                                                            <li><a href="grid.html"><span>Orange</span></a></li>
+                                                            <li><a href="grid.html"><span>Strawberries</span></a></li>
+                                                            <li><a href="grid.html"><span>Grapes</span></a></li>
+                                                        </ul></li>
+                                                    <li class="level3 parent item"><a href="grid.html"><span>Regular Fruits</span></a>
+                                                        <ul class="level1">
+                                                            <li><a href="grid.html"><span>Banana</span></a></li>
+                                                            <li><a href="grid.html"><span>Chikoo</span></a></li>
+                                                            <li><a href="grid.html"><span>Tender Coconut</span></a></li>
+                                                            <li><a href="grid.html"><span>Pineapple</span></a></li>
+                                                        </ul></li>
+                                                    <li class="level3 parent item"><a href="grid.html"><span>Exotics Fruits</span></a>
+                                                        <ul class="level1">
+                                                            <li><a href="grid.html"><span>Mangosteen</span></a></li>
+                                                            <li><a href="grid.html"><span>Avocado</span></a></li>
+                                                            <li><a href="grid.html"><span>Grapefruit</span></a></li>
+                                                            <li><a href="grid.html"><span>Guava Thai</span></a></li>
+                                                        </ul></li>
+                                                    <li class="level3 parent item"><a href="grid.html"><span>Imported Fruits</span></a>
+                                                        <ul class="level1">
+                                                            <li><a href="grid.html"><span>Apple</span></a></li>
+                                                            <li><a href="grid.html"><span>Kiwi Green</span></a></li>
+                                                            <li><a href="grid.html"><span>Passion Fruit</span></a></li>
+                                                            <li><a href="grid.html"><span>Pears</span></a></li>
+                                                        </ul></li>
+                                                    <li class="level3 parent item"><a href="grid.html"><span>Citrus Fruits</span></a>
+                                                        <ul class="level1">
+                                                            <li><a href="grid.html"><span>Lemons</span></a></li>
+                                                            <li><a href="grid.html"><span>Lime</span></a></li>
+                                                            <li><a href="grid.html"><span>Oranges</span></a></li>
+                                                            <li><a href="grid.html"><span>Tangerines</span></a></li>
+                                                        </ul></li>
+                                                    <li class="level3 parent item"><a href="grid.html"><span>Dry Fruits</span></a>
+                                                        <ul class="level1">
+                                                            <li><a href="grid.html"><span>Apricots</span></a></li>
+                                                            <li><a href="grid.html"><span>Dates</span></a></li>
+                                                            <li><a href="grid.html"><span>Figs</span></a></li>
+                                                            <li><a href="grid.html"><span>Raisins</span></a></li>
+                                                        </ul></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="menu_image1">
+                                                    <a href="#"><img alt="Fruits Banner" src="picture/fruits-banner.png" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>Organic Fruits</span></a>
+                            <div class="level0-wrapper dropdown-6col">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center">
+                                            <ul class="level0">
+                                                <li class="level3 parent item"><a href="grid.html"><span>Apples</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Peaches</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Grapes</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Celery</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Spinach</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Strawberries</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Kale</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Collards</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Sweet bell</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Cherry tomatoes</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Hot peppers</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Cabbbage</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Cantaloupe</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Grapefruit</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Passion Fruit</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Cucumbers</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Mangos</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Papayas</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Eggplant</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Sweet Potatoes</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Potatoes</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Asparagus</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Kiwi</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Grapefruit</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Cauliflower</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Nectarines</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Avocados</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Sweet Corn</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Pineapples</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Onions</span></a></li>
+                                                    </ul></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                        <li class="mega-menu"><a class="level-top" href="grid.html"><span>Sprouts</span></a>
+                            <div class="level0-wrapper dropdown-6col">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
+                                            <ul class="level0">
+                                                <li class="level3 parent item"><a href="grid.html"><span>Brussels0</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Racks &amp; Cabinets</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Sofas</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Chairs</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Tables</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Mung bean</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Broccoli</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Serving Trolleys</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Bar Counters</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Dining Cabinets</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Wheatgrass</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Beds</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Chest of Drawers</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Wardrobes &amp; Almirahs</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Nightstands</span></a></li>
+                                                    </ul></li>
+                                                <li class="level3 parent item"><a href="grid.html"><span>Horse gram</span></a>
+                                                    <ul class="level1">
+                                                        <li class="level2"><a href="grid.html"><span>Brazil nut</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Kitchen Fillings</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Wall Units</span></a></li>
+                                                        <li class="level2"><a href="grid.html"><span>Moth bean</span></a></li>
+                                                    </ul></li>
+                                            </ul>
+                                        </div>
+                                        <div class="nav-block nav-block-right std grid12-4">
+                                            <img src="picture/sprouts-banner.png" alt="Sprouts" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                        <li class="mega-menu"><a class="level-top" href="about_us.html"><span>About us</span></a></li>
+                        <li class="nav-custom-link mega-menu"><a href="#" class="level-top"><span>Custom</span></a>
+                            <div class="level0-wrapper custom-menu">
+                                <div class="container">
+                                    <div class="header-nav-dropdown-wrapper">
+                                        <div class="grid12-3">
+                                            <h4 class="heading">48 Hours Only!</h4>
+                                            <p>Lorem ipsum dolor sit amet, gravida dui maecenas dis semper, imperdiet eget duis nulla lectus ut.</p>
+                                            <div>
+                                                <img src="picture/custom-img1.jpg" alt="48 Hours Only!" />
+                                            </div>
+                                        </div>
+                                        <div class="grid12-3">
+                                            <h4 class="heading">Sale 50% Off</h4>
+                                            <p>Lorem ipsum dolor sit amet, gravida dui maecenas dis semper, imperdiet eget duis nulla lectus ut.</p>
+                                            <div>
+                                                <img src="picture/custom-img2.jpg" alt="Sale 50% Off" />
+                                            </div>
+                                        </div>
+                                        <div class="grid12-3">
+                                            <h4 class="heading">Organic Products</h4>
+                                            <p>Lorem ipsum dolor sit amet, gravida dui maecenas dis semper, imperdiet eget duis nulla lectus ut.</p>
+                                            <div>
+                                                <img src="picture/custom-img3.jpg" alt="Organic Products" />
+                                            </div>
+                                        </div>
+                                        <div class="grid12-3">
+                                            <h4 class="heading">Best Sellers!</h4>
+                                            <p>Lorem ipsum dolor sit amet, gravida dui maecenas dis semper, imperdiet eget duis nulla lectus ut.</p>
+                                            <div>
+                                                <img src="picture/custom-img4.jpg" alt="Best Sellers!" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End nav -->
+    </header>
+    <section class="main-container col1-layout">
+        <div class="main container">
+            <div class="col-main">
+                <div class="cart">
+                    <div class="page-title">
+                        <h2>Sitemap</h2>
+                    </div>
+                    <div class="row content-row">
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-4">
+                            <ul class="simple-list arrow-list bold-list">
+                                <li><a href="grid.html">Vegetables</a>
+                                    <ul>
+                                        <li><a href="grid.html"><span>Spinach</span></a></li>
+                                        <li><a href="grid.html"><span>Spring Onion</span></a></li>
+                                        <li><a href="grid.html"><span>Cabbage</span></a></li>
+                                        <li><a href="grid.html"><span>Lettuce</span></a></li>
+                                    </ul></li>
+                                <li><a href="grid.html">Fruits</a>
+                                    <ul>
+                                        <li><a href="grid.html"><span>Mango</span></a></li>
+                                        <li><a href="grid.html"><span>Orange</span></a></li>
+                                        <li><a href="grid.html"><span>Strawberries</span></a></li>
+                                        <li><a href="grid.html"><span>Grapes</span></a></li>
+                                    </ul></li>
+                                <li><a href="grid.html">Organic Fruits</a></li>
+                                <li><a href="grid.html">Sprouts</a></li>
+                                <li><a href="grid.html">Sale</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-4">
+                            <ul class="simple-list arrow-list bold-list">
+                                <li><a href="shopping_cart.html">Shopping Cart</a></li>
+                                <li><a href="login.html">My Account</a>
+                                    <ul>
+                                        <li><a href="login.html">My Account</a></li>
+                                        <li><a href="#">Order history</a></li>
+                                        <li><a href="#">Advanced search</a></li>
+                                        <li><a href="#">Reviews</a></li>
+                                    </ul></li>
+                                <li><a href="#">Customer service</a>
+                                    <ul>
+                                        <li><a href="#">Online support</a></li>
+                                        <li><a href="#">Help &amp; FAQs</a></li>
+                                        <li><a href="#">Call Center</a></li>
+                                    </ul></li>
+                                <li><a href="#">Information</a>
+                                    <ul>
+                                        <li><a href="about_us.html">About Us</a></li>
+                                        <li><a href="#">Shipping &amp; Returns</a></li>
+                                        <li><a href="#">Privacy Notice</a></li>
+                                        <li><a href="#">Conditions of Use</a></li>
+                                    </ul></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-responsive animate scale" src="picture/large-icon-sitemap.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Brand Logo Section -->
+    <div class="brand-logo">
+        <div class="container">
+            <div class="slider-items-products">
+                <div id="brand-logo-slider" class="product-flexslider hidden-buttons">
+                    <div class="slider-items slider-width-col6">
+                        <div class="item">
+                            <a href="#"><img src="picture/b-logo3.png" alt="Brand Logo" /></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="picture/b-logo1.png" alt="Brand Logo1" /></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="picture/b-logo2.png" alt="Brand Logo2" /></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="picture/b-logo4.png" alt="Brand Logo3" /></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="picture/b-logo5.png" alt="Brand Logo4" /></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="picture/b-logo6.png" alt="Brand Logo5" /></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="picture/b-logo2.png" alt="Brand Logo6" /></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="picture/b-logo4.png" alt="Brand Logo7" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Brand Logo Section -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12 col-lg-8">
+                        <div class="footer-column pull-left">
+                            <h4>My Account</h4>
+                            <ul class="links">
+                                <li><a title="Login" href="login.html">Login</a></li>
+                                <li><a title="About us" href="about_us.html">About us</a></li>
+                                <li><a title="Wishlist" href="wishlist.html">Wishlist</a></li>
+                                <li><a title="Checkout" href="checkout.html">Checkout</a></li>
+                                <li><a title="FAQs" href="faq.html">FAQs</a></li>
+                                <li><a title="Contact Us" href="contact_us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column pull-left">
+                            <h4>Style Advisor</h4>
+                            <ul class="links">
+                                <li><a title="Your Account" href="#">Your Account</a></li>
+                                <li><a title="Information" href="#">Information</a></li>
+                                <li><a title="Addresses" href="#">Addresses</a></li>
+                                <li><a title="Discount" href="#">Discount</a></li>
+                                <li><a title="Orders History" href="#">Orders History</a></li>
+                                <li><a title="Additional Information" href="#">Additional Information</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column pull-left">
+                            <h4>Information</h4>
+                            <ul class="links">
+                                <li><a href="sitemap.html" title="Site Map">Site Map</a></li>
+                                <li><a href="#" title="Search Terms">Search Terms</a></li>
+                                <li><a href="#" title="Advanced Search">Advanced Search</a></li>
+                                <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+                                <li><a href="#" title="Suppliers">Suppliers</a></li>
+                                <li><a href="#" title="Our stores">Our stores</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-4">
+                        <div class="footer-column-last">
+                            <div class="newsletter-wrap">
+                                <h4>Sign up for emails</h4>
+                                <form id="newsletter-validate-detail" method="post" action="#">
+                                    <div id="container_form_news">
+                                        <div id="container_form_news2">
+                                            <input type="text" class="input-text required-entry validate-email" placeholder="Enter your email address" title="Sign up for our newsletter" id="newsletter" name="email" />
+                                            <button class="button subscribe" title="Subscribe" type="submit"><i class="fa fa-envelope"></i><span>Subscribe</span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="social">
+                                <h4>Follow Us</h4>
+                                <ul class="link">
+                                    <li class="fb pull-left"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="tw pull-left"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="googleplus pull-left"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="rss pull-left"><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    <li class="pintrest pull-left"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li class="linkedin pull-left"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li class="youtube pull-left"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="payment-accept">
+                                <div>
+                                    <a href="#"><img src="picture/payment-1.png" alt="payment1" /></a>
+                                    <img src="picture/payment-2.png" alt="payment2" />
+                                    <img src="picture/payment-3.png" alt="payment3" />
+                                    <img src="picture/payment-4.png" alt="payment4" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <a href="index.html"><img src="picture/footer-logo.png" alt="logo" /></a>
+                    </div>
+                    <address><i class="fa fa-map-marker"></i>123 Main Street, Anytown, CA 12345 USA <i class="fa fa-mobile"></i><span>+(408) 394-7557</span><i class="fa fa-envelope"></i><span>abc@magikcommerce.com</span></address>
+                </div>
+            </div>
+        </div>
+        <div class="our-features-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-xs-12 col-sm-6">
+                        <div class="feature-box">
+                            <span class="fa fa-truck"></span>
+                            <div class="content">
+                                <h3>Free shipping worldwide</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-6">
+                        <div class="feature-box">
+                            <span class="fa fa-headphones"></span>
+                            <div class="content">
+                                <h3>24X7 Customer support</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-6">
+                        <div class="feature-box">
+                            <span class="fa fa-share"></span>
+                            <div class="content">
+                                <h3>Returns and exchange</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-6">
+                        <div class="feature-box">
+                            <span class="fa fa-phone"></span>
+                            <div class="content">
+                                <h3>Hotline +(408) 394-7557</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-xs-12 coppyright">
+                        &copy; 2018 Magikcommerce. All Rights
+                        <a href="http://www.bootstrapmb.com/" title="bootstrapmb">Reserved</a>.
+                    </div>
+                    <div class="col-sm-7 col-xs-12 company-links">
+                        <ul class="links">
+                            <li><a href="#" title="Magento Themes">Magento Themes</a></li>
+                            <li><a href="#" title="Premium Themes">Premium Themes</a></li>
+                            <li><a href="#" title="Service Packs">Service Packs</a></li>
+                            <li class="last"><a href="#" title="Extensions &amp; Plugins">Extensions &amp; Plugins</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+</div>
+<!-- End page -->
+<!-- mobile menu -->
+<div id="mobile-menu">
+    <ul>
+        <li>
+            <div class="mm-search">
+                <form id="search1" name="search">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                        <input type="text" class="form-control simple" placeholder="Search ..." name="srch-term" id="srch-term" />
+                    </div>
+                </form>
+            </div></li>
+        <li><a href="index.html">Home</a>
+            <ul>
+                <li class="level1"><a href="newsletter.html"><span>Fruit Store</span></a></li>
+            </ul></li>
+        <li><a href="#">Pages</a>
+            <ul>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="product_detail.html">Product Detail</a></li>
+                <li><a href="shopping_cart.html">Shopping Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="multiple_addresses.html">Multiple Addresses</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="blog.html">Blog</a>
+                    <ul>
+                        <li><a href="blog-detail.html">Blog Detail</a></li>
+                    </ul></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+                <li><a href="404error.html">404 Error Page</a></li>
+            </ul></li>
+        <li><a href="#">Vegetables</a>
+            <ul>
+                <li><a href="grid.html"><span>Leaf</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Spinach</span></a></li>
+                        <li><a href="grid.html"><span>Spring Onion</span></a></li>
+                        <li><a href="grid.html"><span>Cabbage</span></a></li>
+                        <li><a href="grid.html"><span>Lettuce</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Root</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Carrots</span></a></li>
+                        <li><a href="grid.html"><span>Beets</span></a></li>
+                        <li><a href="grid.html"><span>Potato</span></a></li>
+                        <li><a href="grid.html"><span>Radishes</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Pod</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Peas</span></a></li>
+                        <li><a href="grid.html"><span>Green beans</span></a></li>
+                        <li><a href="grid.html"><span>Wax beans</span></a></li>
+                        <li><a href="grid.html"><span>Runner beans</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Fruit</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Tomato</span></a></li>
+                        <li><a href="grid.html"><span>Pumpkin</span></a></li>
+                        <li><a href="grid.html"><span>Cucumber</span></a></li>
+                        <li><a href="grid.html"><span>Squash</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Bulb</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Artichokes</span></a></li>
+                        <li><a href="grid.html"><span>Cauliflower</span></a></li>
+                        <li><a href="grid.html"><span>Asparagus</span></a></li>
+                        <li><a href="grid.html"><span>Broccoli</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Flower</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Garlic</span></a></li>
+                        <li><a href="grid.html"><span>Onions</span></a></li>
+                        <li><a href="grid.html"><span>Chives</span></a></li>
+                        <li><a href="grid.html"><span>Leeks</span></a></li>
+                    </ul></li>
+            </ul></li>
+        <li><a href="grid.html">Fruits</a>
+            <ul>
+                <li><a href="grid.html"><span>Seasonal Fruits</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Mango</span></a></li>
+                        <li><a href="grid.html"><span>Orange</span></a></li>
+                        <li><a href="grid.html"><span>Strawberries</span></a></li>
+                        <li><a href="grid.html"><span>Grapes</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Regular Fruits</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Banana</span></a></li>
+                        <li><a href="grid.html"><span>Chikoo</span></a></li>
+                        <li><a href="grid.html"><span>Tender Coconut</span></a></li>
+                        <li><a href="grid.html"><span>Pineapple</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Exotics Fruits</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Mangosteen</span></a></li>
+                        <li><a href="grid.html"><span>Avocado</span></a></li>
+                        <li><a href="grid.html"><span>Grapefruit</span></a></li>
+                        <li><a href="grid.html"><span>Guava Thai</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Imported Fruits</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Apple</span></a></li>
+                        <li><a href="grid.html"><span>Kiwi Green</span></a></li>
+                        <li><a href="grid.html"><span>Passion Fruit</span></a></li>
+                        <li><a href="grid.html"><span>Pears</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Citrus Fruits</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Lemons</span></a></li>
+                        <li><a href="grid.html"><span>Lime</span></a></li>
+                        <li><a href="grid.html"><span>Oranges</span></a></li>
+                        <li><a href="grid.html"><span>Tangerines</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Dry Fruits</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Apricots</span></a></li>
+                        <li><a href="grid.html"><span>Dates</span></a></li>
+                        <li><a href="grid.html"><span>Figs</span></a></li>
+                        <li><a href="grid.html"><span>Raisins</span></a></li>
+                    </ul></li>
+            </ul></li>
+        <li><a href="grid.html">Organic Fruits</a>
+            <ul>
+                <li><a href="grid.html"><span>Apples</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Peaches</span></a></li>
+                        <li><a href="grid.html"><span>Grapes</span></a></li>
+                        <li><a href="grid.html"><span>Celery</span></a></li>
+                        <li><a href="grid.html"><span>Spinach</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Strawberries</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Kale</span></a></li>
+                        <li><a href="grid.html"><span>Collards</span></a></li>
+                        <li><a href="grid.html"><span>Sweet bell</span></a></li>
+                        <li><a href="grid.html"><span>Cherry tomatoes</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Hot peppers</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Cabbbage</span></a></li>
+                        <li><a href="grid.html"><span>Cantaloupe</span></a></li>
+                        <li><a href="grid.html"><span>Grapefruit</span></a></li>
+                        <li><a href="grid.html"><span>Passion Fruit</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Cucumbers</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Mangos</span></a></li>
+                        <li><a href="grid.html"><span>Papayas</span></a></li>
+                        <li><a href="grid.html"><span>Eggplant</span></a></li>
+                        <li><a href="grid.html"><span>Sweet Potatoes</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Potatoes</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Asparagus</span></a></li>
+                        <li><a href="grid.html"><span>Kiwi</span></a></li>
+                        <li><a href="grid.html"><span>Grapefruit</span></a></li>
+                        <li><a href="grid.html"><span>Cauliflower</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Nectarines</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Avocados</span></a></li>
+                        <li><a href="grid.html"><span>Sweet Corn</span></a></li>
+                        <li><a href="grid.html"><span>Pineapples</span></a></li>
+                        <li><a href="grid.html"><span>Onions</span></a></li>
+                    </ul></li>
+            </ul></li>
+        <li><a href="grid.html">Sprouts</a>
+            <ul>
+                <li><a href="grid.html"><span>Brussels0</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Racks &amp; Cabinets</span></a></li>
+                        <li><a href="grid.html"><span>Sofas</span></a></li>
+                        <li><a href="grid.html"><span>Chairs</span></a></li>
+                        <li><a href="grid.html"><span>Tables</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Mung bean</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Broccoli</span></a></li>
+                        <li><a href="grid.html"><span>Serving Trolleys</span></a></li>
+                        <li><a href="grid.html"><span>Bar Counters</span></a></li>
+                        <li><a href="grid.html"><span>Dining Cabinets</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Wheatgrass</span></a>
+                    <ul class="level1">
+                        <li><a href="grid.html"><span>Beds</span></a></li>
+                        <li><a href="grid.html"><span>Chest of Drawers</span></a></li>
+                        <li><a href="grid.html"><span>Wardrobes &amp; Almirahs</span></a></li>
+                        <li><a href="grid.html"><span>Nightstands</span></a></li>
+                    </ul></li>
+                <li><a href="grid.html"><span>Horse gram</span></a>
+                    <ul>
+                        <li><a href="grid.html"><span>Brazil nut</span></a></li>
+                        <li><a href="grid.html"><span>Kitchen Fillings</span></a></li>
+                        <li><a href="grid.html"><span>Wall Units</span></a></li>
+                        <li><a href="grid.html"><span>Moth bean</span></a></li>
+                    </ul></li>
+            </ul></li>
+        <li><a href="about_us.html">About us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+    <div class="top-links">
+        <ul class="links">
+            <li><a title="My Account" href="login.html">My Account</a></li>
+            <li><a title="Wishlist" href="wishlist.html">Wishlist</a></li>
+            <li><a title="Checkout" href="checkout.html">Checkout</a></li>
+            <li><a title="Blog" href="blog.html"><span>Blog</span></a></li>
+            <li><a title="Login" href="login.html"><span>Login</span></a></li>
+        </ul>
+    </div>
+</div>
+<!-- JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.mobile-menu.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
