@@ -2,21 +2,386 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cb4361b-9505-4e05-9bfd-c6b30402db5c" name="Default Changelist" comment="HTML页面">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_alibaba_nacos_config_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_alibaba_nacos_discovery_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_alibaba_sentinel_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_alibaba_sentinel_datasource_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_circuitbreaker_sentinel_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_nacos_config_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_nacos_discovery_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_sentinel_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_annotation_aspectj_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_cluster_client_default_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_cluster_common_default_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_cluster_server_default_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_core_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_datasource_extension_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_parameter_flow_control_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_reactor_adapter_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_spring_webflux_adapter_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_spring_webmvc_adapter_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_transport_common_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_transport_simple_http_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_58.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_nacos_nacos_api_1_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_nacos_nacos_client_1_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_nacos_nacos_common_1_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_spring_spring_context_support_1_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_10_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_10_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_48_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_48_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_48_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_48_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_48_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_48_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_simpleclient_0_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_64.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_64.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_18_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commodity-6662/commodity-6662.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commodity-6662/src/main/java/com/commodity/dao/ClassifyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commodity-6662/src/main/resources/mapper/ClassifyDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/hemacommodity/Classify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/hemauser/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/hemauser/HemaUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/hemauser/UserRank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/hemauser/UserStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/hemauser/Verify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/java/com/hema/client/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/java/com/hema/config/MyWebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/java/com/hema/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/adduser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/registter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/jquery-1.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/vali.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hemauser-6661/hemauser-6661.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hemauser-6661/src/main/java/com/hemauser/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hemauser-6661/src/main/java/com/hemauser/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hemauser-6661/src/main/java/com/hemauser/userconfig/UserConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hemauser-6661/src/main/resources/mapper/UserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_4_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/compare.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/compare.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/contact_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/adduser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/grid.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/multiple_addresses.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/multiple_addresses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/newsletter.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/newsletter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/comm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/quick_view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/sitemap.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/static/myhome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/hema-index.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/hema-index.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/java/com/hema/HemaIndexApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/java/com/hema/HemaIndexApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/adduser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/comm.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/comm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/compare.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/compare.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/ac2ae5775c664fb682a6b10e460efad2.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/ac2ae5775c664fb682a6b10e460efad2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/blogmate.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/blogmate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/fancybox.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/fancybox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/jquery.mobile-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/jquery.mobile-menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/owl.carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/revslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/revslider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtuojig1_i6t8kchkm459wxzqh7k29y.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtuojig1_i6t8kchkm459wxzqh7k29y.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtupjig1_i6t8kchkm459wxzbg_z_pz1.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtupjig1_i6t8kchkm459wxzbg_z_pz1.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtupjig1_i6t8kchkm459wxzbgjz_pz1.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtupjig1_i6t8kchkm459wxzbgjz_pz1.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtupjig1_i6t8kchkm459wxzcgvz_pz1.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtupjig1_i6t8kchkm459wxzcgvz_pz1.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtupjig1_i6t8kchkm459wxzfgrz_pz1.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtupjig1_i6t8kchkm459wxzfgrz_pz1.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtupjig1_i6t8kchkm459wxzog3z_pz1.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtupjig1_i6t8kchkm459wxzog3z_pz1.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtupjig1_i6t8kchkm459wxzsgnz_pz1.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtupjig1_i6t8kchkm459wxzsgnz_pz1.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtupjig1_i6t8kchkm459wxzygzz_pz1.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtupjig1_i6t8kchkm459wxzygzz_pz1.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtuqjig1_i6t8kchkm459wxrys7j.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtuqjig1_i6t8kchkm459wxrys7j.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtuqjig1_i6t8kchkm45_qprys7j.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtuqjig1_i6t8kchkm45_qprys7j.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jturjig1_i6t8kchkm45_aza3gnd-w.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jturjig1_i6t8kchkm45_aza3gnd-w.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jturjig1_i6t8kchkm45_bzf3gnd-w.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jturjig1_i6t8kchkm45_bzf3gnd-w.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jturjig1_i6t8kchkm45_c5h3gnd-w.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jturjig1_i6t8kchkm45_c5h3gnd-w.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jturjig1_i6t8kchkm45_cjd3gnd-w.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jturjig1_i6t8kchkm45_cjd3gnd-w.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jturjig1_i6t8kchkm45_dje3gnd-w.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jturjig1_i6t8kchkm45_dje3gnd-w.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jturjig1_i6t8kchkm45_epg3gnd-w.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jturjig1_i6t8kchkm45_epg3gnd-w.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jturjig1_i6t8kchkm45_zpc3gnd-w.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jturjig1_i6t8kchkm45_zpc3gnd-w.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/fonts/jtusjig1_i6t8kchkm459wlhzg.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/fonts/jtusjig1_i6t8kchkm459wlhzg.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/grid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/bkg_rating.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/bkg_rating.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/btn_remove.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/btn_remove.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/left-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/left-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/minus.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/minus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/newsletter-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/newsletter-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/plus.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/plus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/right-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/right-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/slider-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/slider-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/to-top-arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/to-top-arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/images/top-strip.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/images/top-strip.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/js/cloud-zoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/cloud-zoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/js/countdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/countdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/js/jquery.mobile-menu.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/jquery.mobile-menu.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/js/revslider.js" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/js/revslider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/multiple_addresses.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/multiple_addresses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/myhome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/newsletter.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/b-logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/b-logo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/b-logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/b-logo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/b-logo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/b-logo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/b-logo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/b-logo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/b-logo5.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/b-logo5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/b-logo6.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/b-logo6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/best-price-always.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/best-price-always.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/blog-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/blog-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/blog-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/blog-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/blog-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/blog-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/bottom-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/bottom-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/category-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/category-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/category-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/category-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/custom-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/custom-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/custom-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/custom-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/custom-img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/custom-img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/custom-img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/custom-img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/end-of-season.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/end-of-season.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/english.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/english.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/f-box-close-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/f-box-close-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/footer-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/footer-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/francais.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/francais.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/fruits-banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/fruits-banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/german.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/german.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/healthy-foods.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/healthy-foods.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/hot-trends-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/hot-trends-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/large-icon-sitemap.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/large-icon-sitemap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/mega-sale.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/mega-sale.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/organic-fruits.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/organic-fruits.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/payment-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/payment-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/payment-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/payment-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/payment-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/payment-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/payment-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/payment-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product23.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product24.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product25.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/product9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/product9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/rhs-banner-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/rhs-banner-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/signal.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/signal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/slide-img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/slide-img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/slide-img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/slide-img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/slide1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/slide1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/slide2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/slide2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/slide3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/slide3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/picture/sprouts-banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/picture/sprouts-banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product23.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product24.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product25.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/products-images/product9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/products-images/product9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/main/static/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/hema-index/src/main/resources/static/wishlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hema-index/src/test/java/com/hema/HemaIndexApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +391,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -57,12 +425,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hema-index/src/main/resources/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,10 +447,50 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyIdeaWork\Git\heMa\hema-index\src\main\resources\static" />
+      <recent name="D:\MyIdeaWork\Git\heMa\hema-index\src\main\resources\static\js" />
+      <recent name="D:\MyIdeaWork\Git\heMa\hema-index\src\main\static\js" />
+      <recent name="D:\MyIdeaWork\Git\heMa\hema-index\src\main\static\css" />
       <recent name="D:\MyIdeaWork\heMa\hema-index\src\main" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyIdeaWork\Git\heMa\hema-index\src\main\resources" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Commodity6662Application">
+    <configuration name="UserConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hemauser.userconfig.UserConfig" />
+      <module name="hemauser-6661" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hemauser.userconfig.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hemauser.controller.UserController" />
+      <module name="hemauser-6661" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hemauser.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Commodity6662Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="commodity-6662" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.commodity.Commodity6662Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HemaIndexApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hema-index" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hema.HemaIndexApplication" />
@@ -85,6 +498,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Hemauser6661Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hemauser-6661" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hemauser.Hemauser6661Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UserController" />
+        <item itemvalue="Application.UserConfig" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -110,6 +536,12 @@
       <updated>1586067118494</updated>
       <workItem from="1586067119903" duration="731000" />
       <workItem from="1586341209665" duration="9136000" />
+      <workItem from="1586357071891" duration="788000" />
+      <workItem from="1586423965153" duration="20244000" />
+      <workItem from="1586661257146" duration="28558000" />
+      <workItem from="1586764783771" duration="12774000" />
+      <workItem from="1586910414628" duration="33060000" />
+      <workItem from="1586958281295" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="测试更改">
       <created>1586342164111</created>
@@ -202,6 +634,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="加入HTML页面" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="195" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586514550433">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="195" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586514550433" />
+    <state x="1069" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1586939445157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="1069" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586939445157" />
+    <state x="553" y="279" width="429" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586805713694">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="279" width="429" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1586805713694" />
+    <state x="372" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586911373859">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="372" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586911373859" />
     <state x="676" y="2" key="CommitChangelistDialog2" timestamp="1586350617881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -222,6 +670,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="417" y="136" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586341781194" />
+    <state width="1478" height="171" key="GridCell.Tab.0.bottom" timestamp="1586958435022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586958435022" />
+    <state width="1478" height="171" key="GridCell.Tab.0.center" timestamp="1586958435021">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586958435021" />
+    <state width="1478" height="171" key="GridCell.Tab.0.left" timestamp="1586958435021">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586958435021" />
+    <state width="1478" height="171" key="GridCell.Tab.0.right" timestamp="1586958435022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586958435022" />
+    <state width="1478" height="171" key="GridCell.Tab.1.bottom" timestamp="1586958435023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="171" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586958435023" />
+    <state width="1478" height="171" key="GridCell.Tab.1.center" timestamp="1586958435022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="171" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586958435022" />
+    <state width="1478" height="171" key="GridCell.Tab.1.left" timestamp="1586958435022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="171" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586958435022" />
+    <state width="1478" height="171" key="GridCell.Tab.1.right" timestamp="1586958435023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="171" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586958435023" />
     <state x="524" y="126" key="RollbackChangesDialog" timestamp="1586345842116">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -234,17 +714,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586350664542" />
-    <state x="617" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1586341223219">
+    <state x="617" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1586958275627">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="617" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586341223219" />
-    <state x="356" y="133" key="new project wizard" timestamp="1586341378328">
+    <state x="617" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586958275627" />
+    <state x="356" y="122" key="new project wizard" timestamp="1586938100609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="356" y="133" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586341378328" />
-    <state x="508" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1586348678786">
+    <state x="356" y="122" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586938100609" />
+    <state x="571" y="210" key="run.anything.popup" timestamp="1586704957000">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="508" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586348678786" />
+    <state x="571" y="210" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1586704957000" />
+    <state x="508" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1586804268387">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="508" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586804268387" />
   </component>
 </project>

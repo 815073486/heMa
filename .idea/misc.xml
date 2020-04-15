@@ -7,6 +7,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/hema-index/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/hemauser-6661/pom.xml" />
+        <option value="$PROJECT_DIR$/commodity-6662/pom.xml" />
       </list>
     </option>
   </component>
