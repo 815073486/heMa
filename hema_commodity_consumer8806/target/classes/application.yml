@@ -1,0 +1,41 @@
+
+# 1.0新添加的enabled激活自动配置，使得我们可以在yaml/properties文件中配置，
+# 避免了以前需要客户端引入2个文件：
+# file.conf 和 registry.conf
+#seata:
+#  enabled: true     # 1.0新特性，需要依赖seata-spring-boot-starter,默认为true
+#  tx-service-group: bdqn_tx_group
+#  registry:
+#    type: nacos
+#    nacos:
+#      server-addr: http://localhost:8848
+#  client:
+#    support:
+#      spring:
+#        datasource-autoproxy: false
+#  service:
+#    disable-global-transaction: false   #bug
+
+server:
+  port: 8806
+spring:
+  application:
+    name: hema-commodity-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  #    sentinel:
+  #      transport:
+  #        dashboard: 127.0.0.1:8080
+  #      eager: true  #取消控制台懒加载，默认false要刷新请求才会在面板显示
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#feign:
+#  sentinel:
+#    enabled: true
+

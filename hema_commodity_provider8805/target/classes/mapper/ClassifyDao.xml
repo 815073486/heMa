@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 允许 JDBC 支持自动生成主键，需要驱动兼容。
+   如果设置为 true 则这个设置强制使用自动生成主键，尽管一些驱动不能兼容但仍可正常工作（比如 Derby）。
+   我写成了这样就不报错了 -->
+<mapper namespace="com.cssl.dao.ClassifyDao">
+    <select id="classify" resultType="classify">
+        SELECT classifyid,classifyname,fatherid FROM classify WHERE classifyid=fatherid ORDER BY classifyid DESC
+    </select>
+
+    <select id="classifyFather" resultType="classify">
+        SELECT classifyid,classifyname,fatherid FROM classify WHERE classifyid!=fatherid and fatherid=#{fatherid} ORDER BY classifyid DESC
+    </select>
+</mapper>

@@ -10,7 +10,12 @@
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/hemauser-6661/pom.xml" />
         <option value="$PROJECT_DIR$/commodity-6662/pom.xml" />
+        <option value="$PROJECT_DIR$/comm/pom.xml" />
+        <option value="$PROJECT_DIR$/hema_provider8803/pom.xml" />
+        <option value="$PROJECT_DIR$/hema_commodity_provider8805/pom.xml" />
+        <option value="$PROJECT_DIR$/hema_commodity_consumer8806/pom.xml" />
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

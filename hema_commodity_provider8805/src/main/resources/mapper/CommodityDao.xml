@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 允许 JDBC 支持自动生成主键，需要驱动兼容。
+   如果设置为 true 则这个设置强制使用自动生成主键，尽管一些驱动不能兼容但仍可正常工作（比如 Derby）。
+   我写成了这样就不报错了 -->
+<mapper namespace="com.cssl.dao.CommodityDao">
+    <select id="selectCommodity" resultType="map">
+        SELECT commid,commname,classifyname,merchantname,commimg,rush,commtime,a.classifyid,a.merchantid,b.fatherid FROM `commodity` a,classify b,merchant c
+        WHERE a.classifyid=b.classifyid AND a.merchantid=c.merchantid ORDER BY commid DESC
+    </select>
+
+    <sql id="ss">
+        <if test="commid!=0">
+            and a.commid=#{commid}
+        </if>
+        <if test="commtime!='' and commtime!=null">
+            and a.commtime LIKE #{commtime}
+        </if>
+        <if test="classifyid!='' and classifyid!=null">
+            and a.classifyid=#{classifyid}
+        </if>
+        <if test="fatherid!='' and fatherid != null">
+            and b.fatherid=#{fatherid}
+        </if>
+    </sql>
+
+    <select id="commodity" resultType="map">
+        SELECT commid,commname,classifyname,merchantname,commimg,rush,commtime,a.classifyid,a.merchantid,b.fatherid,presentation FROM `commodity` a,classify b,merchant c
+        WHERE a.classifyid=b.classifyid AND a.merchantid=c.merchantid <include refid="ss"></include>
+        ORDER BY commid DESC
+    </select>
+    
+    <select id="advancedSelectCommodity" resultType="map">
+        SELECT commid,commname,classifyname,merchantname,commimg,rush,commtime,a.classifyid,a.merchantid,b.fatherid,presentation FROM `commodity` a,classify b,merchant c
+        WHERE a.classifyid=b.classifyid AND a.merchantid=c.merchantid <include refid="ss"></include>
+        ORDER BY commid DESC
+    </select>
+</mapper>

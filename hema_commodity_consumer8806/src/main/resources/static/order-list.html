@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.2</title>
+        <meta name="renderer" content="webkit">
+<!--        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+<!--        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />-->
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/xadmin.css">
+        <script src="./lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./js/xadmin.js"></script>
+    </head>
+    
+    <body>
+        <div class="x-nav">
+            <span class="layui-breadcrumb">
+                <a href="">首页</a>
+                <a href="">演示</a>
+                <a>
+                    <cite>导航元素</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+                <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+            </a>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body ">
+                            <form class="layui-form layui-col-space5" id="select">
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <input class="layui-input" placeholder="添加商品日期" name="commtime" id="start">
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <select name="fatherid" id="xm1" lay-filter="xmFilter">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <select name="classifyid" id="shipping1">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <input type="text" name="commid" placeholder="商品编号" autocomplete="off" class="layui-input"></div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <button class="layui-btn" type="button" id="start1">
+                                        <i class="layui-icon">&#xe615;</i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="layui-card-header">
+                            <button class="layui-btn layui-btn-danger">
+                                <i class="layui-icon"></i>批量删除</button>
+                            <button class="layui-btn" onclick="xadmin.open('添加商品','./commodity-add.html',700,650)">
+                                <i class="layui-icon"></i>添加</button>
+                        </div>
+                        <div class="layui-btn-group test-table-operate-btn" style="margin-bottom: 10px;">
+                            <button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
+                            <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
+                            <button class="layui-btn" data-type="isAll">验证是否全选</button>
+                        </div>
+                            <!-- 表格 -->
+                        <table class="layui-hide" id="demo" lay-filter="test"></table>
+                        <script type="text/html" id="barDemo">
+                            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+                            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                        </script>
+                        </div>
+
+                        <div class="layui-card-body ">
+                            <div class="page">
+                                <div>
+                                    <a class="prev" href="">&lt;&lt;</a>
+                                    <a class="num" href="">1</a>
+                                    <span class="current">2</span>
+                                    <a class="num" href="">3</a>
+                                    <a class="num" href="">489</a>
+                                    <a  class="next" href="">&gt;&gt;</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-row" id="popUpdateTest" style="display:none;">
+            <div class="layui-col-md10">
+                <form style="margin-left: 150px;margin-top: 20px" class="layui-form layui-form-pane" lay-filter="dataFrm" >
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>商品名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text"  name="commname" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label  class="layui-form-label">
+                            <span class="x-red">*</span>商家名称</label>
+                        <div class="layui-input-inline select">
+                            <select name="merchantid" id="merchant" lay-verify="required">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label  class="layui-form-label">
+                            <span class="x-red">*</span>导航栏类别</label>
+                        <div class="layui-input-inline select">
+                            <select name="classifyid" id="xm" lay-verify="required" lay-filter="xmFilter">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label  class="layui-form-label">
+                            <span class="x-red">*</span>导航子类</label>
+                        <div class="layui-input-inline">
+                            <select id="shipping" name="fatherid" class="valid">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label  class="layui-form-label">
+                            <span class="x-red">*</span>是否热卖</label>
+                        <div class="layui-input-inline">
+                            <input type="checkbox" name="rush" required="" lay-verify="checkbox" autocomplete="off" class="layui-input">
+                        </div>
+
+                    </div>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        <div id="uploadQRcode" class="layui-upload">
+                            <button type="button" class="layui-btn" id="uploadQR">
+                                <i class="layui-icon"></i>商品图片<span style="color: red;font-size: 20px;">*</span>
+                            </button>
+                            <div class="layui-upload-list">
+                                <img id="qrshow" src="" alt="" class="layui-upload-img"
+                                     style="height: 100px;width:100px;border:1px solid black;">
+                            </div>
+                            <div id="startDiv">
+                                <button type="button" class="layui-btn" id="startUploadQR">开始上传</button>
+                            </div>
+                            <div style="color: #c2c2c2;margin:10px 0;">温馨提示: 每次最多上传一张图片, 单张图片的大小不超过2MB</div>
+                        </div>
+                        <input type="text" name="commimg" id="qrInput" style="display: none;" lay-verify="required">
+                        <input type="text" name="commid" id="commid" style="display: none;">
+                    </blockquote>
+                    <div class="layui-form-item">
+                        <label  class="layui-form-label" style="color: red">
+                            <span class="x-red">*</span>商品简介</label>
+                        <div class="layui-input-inline select">
+                            <textarea style="margin-left: 10px; width: 205px; height: 100px;" name="presentation"  lay-verify="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item" id="update">
+                        <button class="layui-btn layui-btn-danger" lay-submit lay-filter="login" style="margin-left: 100px" type="submit">
+                            <i class="layui-icon"></i>修改</button>
+                        <button class="layui-btn layui-btn-danger" lay-submit lay-filter="quxiao" style="margin-left: 40px" type="button">
+                            <i class="layui-icon"></i>取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <!-- 定义下拉回显 -->
+    <script>
+        function classify(father,classify) {
+            $.ajax({
+                url: 'consumer/classifyId?fatherid=' + father,
+                dataType: 'json',
+                type: 'post',
+                success: function (daa) {
+                    $("#shipping").empty();
+                    if (daa != null) {
+                        $.each(daa, function (index, item) {
+                            $('#shipping').append(new Option(item.classifyname, item.classifyid));// 下拉菜单里添加元素
+                            $("#shipping").val(classify)
+                        });
+                        layui.form.render("select");//重新渲染 固定写法
+                    } else {
+                        $.each(daa, function (index, item) {
+                            $('#shipping').append(new Option("请选择", ""));// 下拉菜单里添加元素
+                        });
+                    }
+
+                }
+            })
+        }
+        function father() {
+            alert("KKKKKK")
+            var $=layui.jquery;
+            $.ajax({
+                url: 'consumer/classifyfall',
+                dataType: 'json',
+                type: 'post',
+                success: function (data) {
+                    $.each(data, function (index, item) {
+                        $('#xm1').append(new Option(item.classifyname, item.classifyid));// 下拉菜单里添加元素
+                    });
+                    layui.form.render("select");//重新渲染 固定写法
+                }
+            })
+        }
+    </script>
+        <script>
+        layui.use(['laydate','table', 'form','upload'],function() {
+            var laydate = layui.laydate;
+            var table=layui.table;
+            var upload=layui.upload;
+            var form=layui.form;
+            var $=layui.jquery;
+
+            laydate.render({
+                elem: '#start' //指定元素
+            });
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#end' //指定元素
+            });
+
+//////////////  监听高级查询
+            $("#start1").click(function (data) {
+                var s=$("#select").serialize();
+                layer.alert(s+"");
+                    table.render({
+                        elem: '#demo'
+                        ,height: 'auto'
+                        ,url:"consumer/advancedSelectCommodity?"+s
+                        ,title: '商品表'
+                        ,page: true //开启分页
+                        ,toolbar: false //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+                        ,totalRow: true //开启合计行
+                        ,cols: [[ //表头
+                            {type: 'checkbox', fixed: 'left'}
+                            ,{field: 'commid', title: '商品编号', width:100,height: 200, sort: true,align:'center'}
+                            ,{field: 'commname', title: '商品名称', width:120,height: 200,align:'center'}
+                            ,{field: 'classifyname', title: '分类名称',align:'center',height: 200, width: 120}
+                            ,{field: 'merchantname', title: '商家名称',align:'center',height: 200, width:80}
+                            ,{field: 'commtime', title: '添加时间',align:'center',height: 200, width:180,templet:function (data) {
+                                    return layui.util.toDateString(data.commtime)
+                                }}
+                            ,{field: 'commimg', title: '商品图片', align:'center',height: 200,width: 150,templet:function (data) {
+                                    return '<img src='+data.commimg+' style="margin-top: -20px;width:50px;heigth:50px"/>'
+                                }}
+                            ,{fixed: 'right',height: 200, width: 100, align: 'center',title: "是否热卖",templet: function (data) {
+                                    if(data.rush==0){
+                                        return '<input type="checkbox"  name="switch"  lay-text="开启|停用" checked="checked" lay-skin="switch" lay-filter="sfzs">'
+                                    }else if(data.rush==1){
+                                        return '<input type="checkbox"  name="switch"  lay-text="开启|停用" lay-skin="switch" lay-filter="sfzs">'
+                                    }
+                                }}
+                            ,{fixed: 'right', width: 200, align:'center',title: "操作", toolbar: '#barDemo'}
+                        ]]
+                    })
+                })
+
+            //执行一个 table 实例
+            tablepage=table.render({
+                elem: '#demo'
+                ,height: 'auto'
+                ,url: 'consumer/fallCommodity' //数据接口
+                ,title: '商品表'
+                ,page: true //开启分页
+                ,toolbar: false //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+                ,totalRow: true //开启合计行
+                ,cols: [[ //表头
+                    {type: 'checkbox', fixed: 'left'}
+                    ,{field: 'commid', title: '商品编号', width:100,height: 200, sort: true,align:'center'}
+                    ,{field: 'commname', title: '商品名称', width:120,height: 200,align:'center'}
+                    ,{field: 'classifyname', title: '分类名称',align:'center',height: 200, width: 120}
+                    ,{field: 'merchantname', title: '商家名称',align:'center',height: 200, width:80}
+                    ,{field: 'commtime', title: '添加时间',align:'center',height: 200, width:180,templet:function (data) {
+                            return layui.util.toDateString(data.commtime)
+                        }}
+                    ,{field: 'commimg', title: '商品图片', align:'center',height: 200,width: 150,templet:function (data) {
+                            return '<img src='+data.commimg+' style="margin-top: -20px;width:50px;heigth:50px"/>'
+                        }}
+                    ,{fixed: 'right',height: 200, width: 100, align: 'center',title: "是否热卖",templet: function (data) {
+                            if(data.rush==0){
+                                return '<input type="checkbox"  name="switch"  lay-text="开启|停用" checked="checked" lay-skin="switch" lay-filter="sfzs">'
+                            }else if(data.rush==1){
+                                return '<input type="checkbox"  name="switch"  lay-text="开启|停用" lay-skin="switch" lay-filter="sfzs">'
+                            }
+                        }}
+                    ,{fixed: 'right', width: 200, align:'center',title: "操作", toolbar: '#barDemo'}
+                ]]
+            });
+            //监听行工具事件
+            table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+                var data = obj.data //获得当前行数据
+                    ,layEvent = obj.event; //获得 lay-event 对应的值
+                if(layEvent === 'detail'){    //查看信息
+//////////////
+                    layer.open({
+                        //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+                        type: 1,
+                        title: "查看商品信息",
+                        area: ['700px', '650px'],
+                        content: $("#popUpdateTest"),       //引用的弹出层的页面层的方式加载修改界面表单
+                        success: function (index) {
+                            $.ajax({
+                                url:"consumer/commod?commid="+JSON.stringify(data.commid),
+                                type:"post",
+                                dataType:"json",
+                                contentType : "application/json",
+                                success:function (index) {
+                                    form.val("dataFrm", {
+                                        commname:index.commname,
+                                        merchantid:index.merchantid,
+                                        fatherid:index.fatherid,
+                                        classifyid:index.classifyid,
+                                        rush:index.rush,
+                                        presentation:index.presentation
+                                    });
+                                    //渲染图片框
+                                    $("#qrshow").attr("src",index.commimg);
+                                    //渲染表单的联动下拉框
+                                    $("#xm").val(index.fatherid)
+                                    //father(index.fatherid)
+                                    classify(index.fatherid,index.classifyid)
+                                }
+                            })
+                        },cancel: function(){
+                            $("#update").show();
+                            $("#img").show();
+                        }
+                    });
+                    var s=$("#upload");
+                    s.attr("src",data.commimg);
+                    $("#update").hide();
+                    $("#img").hide();
+                } else if(layEvent === 'del'){
+                    layer.confirm('真的删除行么', function(index){
+                        $.ajax({
+                            url:"consumer/delCommodity?commid="+JSON.stringify(data.commid),
+                            type:"post",
+                            dataType:"json",
+                            contentType : "application/json",
+                            success:function (dda) {
+                                if(dda==1){
+                                    layer.msg("删除成功！")
+                                    obj.del(); //删除对应行（tr）的DOM结构
+                                }else{
+                                    layer.msg("删除失败！")
+                                }
+                            }
+                        })
+                        layer.close(index);
+                        //向服务端发送删除指令
+                    });
+                } else if(layEvent === 'edit'){
+                    page=layer.open({
+                        //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+                        type: 1,
+                        title: "修改商品",
+                        area: ['700px', '650px'],
+                        content: $("#popUpdateTest"), //引用的弹出层的页面层的方式加载修改界面表单
+                        success: function (index) {
+                            $.ajax({
+                                url:"consumer/commod?commid="+JSON.stringify(data.commid),
+                                type:"post",
+                                dataType:"json",
+                                contentType : "application/json",
+                                success:function (index) {
+                                    form.val("dataFrm", {
+                                        commname:data.commname,
+                                        merchantid:data.merchantid,
+                                        classifyid:data.classifyid,
+                                        fatherid:data.fatherid,
+                                        presentation:index.presentation,
+                                        rush:data.rush
+                                    });
+                                    //渲染图片框
+                                    $("#qrshow").attr("src",index.commimg);
+                                    $("#commid").attr("value",data.commid)
+                                    var d=data.commimg.substring(data.commimg.lastIndexOf("/")+1);
+                                    $("#qrInput").attr("value",d)
+                                    //渲染表单的联动下拉框
+                                    father(index.fatherid)
+                                    classify(index.fatherid,index.classifyid)
+                                }
+                            })
+                        },cancel:function () {}
+                    });
+                    var s=$("#upload");
+                    s.attr("src",data.commimg);
+                }
+            });
+
+            //监听取消编辑
+            form.on("submit(quxiao)",function () {
+                layer.close(page)
+            })
+
+            //选完文件后不自动上传  商品主图
+            var uploadSingle = upload.render({
+                elem: '#uploadQR'
+                , url: 'manager/uploadimg'
+                , accept: 'images'  // 允许上传的文件类型
+                , size: 2048        // 最大允许上传的文件大小  单位 KB
+                , auto: false
+                , bindAction: '#startUploadQR'
+                , choose: function (obj) {
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function (index, file, result) {
+                        $('#qrshow').attr('src', result); //图片链接（base64）
+                    });
+                }
+                , done: function (res, index, upload) {
+                    if (res.code == 0) {
+                        //上传成功
+                        $("#qrInput").val(res.data.src);
+                        var startDiv = $('#startDiv');
+                        startDiv.html('<span style="color: #5FB878;">上传成功</span>');
+                    } else {
+                        this.error(index, upload);
+                    }
+                }
+                , error: function (index, upload) {
+                    //演示失败状态，并实现重传
+                    var startDiv = $('#startDiv');
+                    startDiv.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload" style="width:50px;height:30px;text-align:center;line-height:30px;">重试</a>');
+                    startDiv.find('.demo-reload').on('click', function () {
+                        uploadSingle.upload();
+                    });
+                }
+            });
+
+////////////
+            //监听提交进行修改
+            form.on('submit(login)', function(data){
+                var s=data.field;
+                layer.alert(data.field.commimg)
+                $.ajax({
+                    url:"consumer/updateCommodity",
+                    type:"post",
+                    data:s,
+                    success:function (data) {
+                        if(data==1){
+                            layer.msg("修改成功！")
+                            layer.close(page)
+                            tablepage.reload();
+                        }else{
+                            layer.msg("修改失败！")
+                        }
+                    }
+                })
+                return false;
+            });
+
+            var $ = layui.$, active = {
+                getCheckData: function(){ //获取选中数据
+                    var checkStatus = table.checkStatus('demo')   //放的是表格  elem: '#demo'
+                        ,data = checkStatus.data;
+                    layer.alert(JSON.stringify(data));
+                }
+                ,getCheckLength: function(){ //获取选中数目
+                    var checkStatus = table.checkStatus('demo')
+                        ,data = checkStatus.data;
+                    layer.msg('选中了：'+ data.length + ' 个');
+                }
+                ,isAll: function(){ //验证是否全选
+                    var checkStatus = table.checkStatus('demo');
+                    layer.msg(checkStatus.isAll ? '全选': '未全选')
+                }
+            };
+            $('.test-table-operate-btn .layui-btn').on('click', function(){
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+        });
+
+////////////////
+        layui.use(['form', 'upload', 'layer'], function () {
+            var form = layui.form;//检查项目添加到下拉框中
+            var $=layui.jquery;
+            $.ajax({
+                url: 'consumer/classifyfall',
+                dataType: 'json',
+                type: 'post',
+                success: function (data) {
+                    $.each(data, function (index, item) {
+                        $('#xm').append(new Option(item.classifyname, item.classifyid));// 下拉菜单里添加元素
+                        $('#xm1').append(new Option(item.classifyname, item.classifyid))
+                    });
+                    layui.form.render("select");//重新渲染 固定写法
+                }
+            })
+            $.ajax({
+                url:"consumer/merchantfall",
+                dataType:'json',
+                type:'post',
+                success:function (data) {
+                    $.each(data, function (index, item) {
+                        $('#merchant').append(new Option(item.merchantname, item.merchantid));// 下拉菜单里添加元素
+                    });
+                    layui.form.render("select");//重新渲染 固定写法
+                }
+            })
+            form.on('select(xmFilter)',function (data) {
+                var sex= data.value;                                   //获取value值
+                var text= data.elem[data.elem.selectedIndex].text;;    //获取显示的值
+                $.ajax({
+                    url:'consumer/classifyId?fatherid='+sex,
+                    dataType: 'json',
+                    type: 'post',
+                    success: function (daa) {
+                        $("#shipping").empty();
+                        if(daa!=null){
+                            $.each(daa, function (index, item) {
+                                $('#shipping').append(new Option(item.classifyname, item.classifyid));// 下拉菜单里添加元素
+                                $('#shipping1').append(new Option(item.classifyname, item.classifyid));// 下拉菜单里添加元素
+                            });
+                        }else {
+                            $.each(daa, function (index, item) {
+                                $('#shipping').append(new Option("请选择", ""));// 下拉菜单里添加元素
+                                $('#shipping1').append(new Option("请选择", ""));// 下拉菜单里添加元素
+                            });
+                        }
+                        layui.form.render("select");//重新渲染 固定写法
+                    }
+                })
+            })
+
+            /*用户-停用*/
+            function member_stop(obj, id) {
+                layer.confirm('确认要停用吗？',
+                    function(index) {
+                        if ($(obj).attr('title') == '启用') {
+                            //发异步把用户状态进行更改
+                            $(obj).attr('title', '停用');
+                            $(obj).find('i').html('&#xe62f;');
+
+                            $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
+                            layer.msg('已停用!', {
+                                icon: 5,
+                                time: 1000
+                            });
+
+                        } else {
+                            $(obj).attr('title', '启用');
+                            $(obj).find('i').html('&#xe601;');
+
+                            $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
+                            layer.msg('已启用!', {
+                                icon: 5,
+                                time: 1000
+                            });
+                        }
+
+                    });
+            }
+            /*用户-删除*/
+            function member_del(obj, id) {
+                layer.confirm('确认要删除吗？',
+                    function(index) {
+                        //发异步删除数据
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!', {
+                            icon: 1,
+                            time: 1000
+                        });
+                    });
+            }
+            function delAll(argument) {
+                var data = tableCheck.getData();
+                layer.confirm('确认要删除吗？' + data,
+                    function(index) {
+                        //捉到所有被选中的，发异步进行删除
+                        layer.msg('删除成功', {
+                            icon: 1
+                        });
+                        $(".layui-form-checked").not('.header').parents('tr').remove();
+                    });
+            }
+        });
+
+        </script>
+
+</html>

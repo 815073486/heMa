@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.2</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/xadmin.css">
+        <script src="./lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./js/xadmin.js"></script>
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        <div class="x-nav">
+            <span class="layui-breadcrumb">
+                <a href="">首页</a>
+                <a href="">演示</a>
+                <a>
+                    <cite>导航元素</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+                <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+            </a>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+
+                <div class="layui-col-md12">
+
+                    <div class="layui-card">
+                        <div class="layui-card-body ">
+                            <div class="layui-collapse" lay-filter="test">
+                                <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">条件筛选<i class="layui-icon layui-colla-icon"></i></h2>
+                                <div class="layui-colla-content">
+                                  <form class="layui-form" action="">
+                                      <div class="layui-form-item">
+                                        <div class="layui-inline">
+                                          <label class="layui-form-label">范围</label>
+                                          <div class="layui-input-inline" style="width: 100px;">
+                                            <input type="text" name="price_min" placeholder="￥" autocomplete="off" class="layui-input">
+                                          </div>
+                                          <div class="layui-form-mid">-</div>
+                                          <div class="layui-input-inline" style="width: 100px;">
+                                            <input type="text" name="price_max" placeholder="￥" autocomplete="off" class="layui-input">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="layui-form-item">
+                                        <div class="layui-inline">
+                                          <label class="layui-form-label">分组选择框</label>
+                                          <div class="layui-input-inline">
+                                            <select name="quiz">
+                                              <option value="">请选择问题</option>
+                                              <optgroup label="城市记忆">
+                                                <option value="你工作的第一个城市">你工作的第一个城市</option>
+                                              </optgroup>
+                                              <optgroup label="学生时代">
+                                                <option value="你的工号">你的工号</option>
+                                                <option value="你最喜欢的老师">你最喜欢的老师</option>
+                                              </optgroup>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="layui-inline">
+                                          <label class="layui-form-label">搜索选择框</label>
+                                          <div class="layui-input-inline">
+                                            <select name="modules" lay-verify="required" lay-search="">
+                                              <option value="">直接选择或搜索选择</option>
+                                              <option value="1">layer</option>
+                                              <option value="2">form</option>
+                                              <option value="3">layim</option>
+                                              <option value="4">element</option>
+                                              <option value="5">laytpl</option>
+                                              <option value="6">upload</option>
+                                              <option value="7">laydate</option>
+                                              <option value="8">laypage</option>
+                                              <option value="9">flow</option>
+                                              <option value="10">util</option>
+                                              <option value="11">code</option>
+                                              <option value="12">tree</option>
+                                              <option value="13">layedit</option>
+                                              <option value="14">nav</option>
+                                              <option value="15">tab</option>
+                                              <option value="16">table</option>
+                                              <option value="17">select</option>
+                                              <option value="18">checkbox</option>
+                                              <option value="19">switch</option>
+                                              <option value="20">radio</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="layui-form-item">
+                                        <label class="layui-form-label">联动选择框</label>
+                                        <div class="layui-input-inline">
+                                          <select name="quiz1">
+                                            <option value="">请选择省</option>
+                                            <option value="浙江" selected="">浙江省</option>
+                                            <option value="你的工号">江西省</option>
+                                            <option value="你最喜欢的老师">福建省</option>
+                                          </select>
+                                        </div>
+                                        <div class="layui-input-inline">
+                                          <select name="quiz2">
+                                            <option value="">请选择市</option>
+                                            <option value="杭州">杭州</option>
+                                            <option value="宁波" disabled="">宁波</option>
+                                            <option value="温州">温州</option>
+                                            <option value="温州">台州</option>
+                                            <option value="温州">绍兴</option>
+                                          </select>
+                                        </div>
+                                        <div class="layui-input-inline">
+                                          <select name="quiz3">
+                                            <option value="">请选择县/区</option>
+                                            <option value="西湖区">西湖区</option>
+                                            <option value="余杭区">余杭区</option>
+                                            <option value="拱墅区">临安市</option>
+                                          </select>
+                                        </div>
+                                        <div class="layui-form-mid layui-word-aux">此处只是演示联动排版，并未做联动交互</div>
+                                      </div>
+                                      
+                                      <div class="layui-form-item">
+                                        <label class="layui-form-label">复选框</label>
+                                        <div class="layui-input-block">
+                                          <input type="checkbox" name="like[write]" title="写作">
+                                          <input type="checkbox" name="like[read]" title="阅读" checked="">
+                                          <input type="checkbox" name="like[game]" title="游戏">
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="layui-form-item" pane="">
+                                        <label class="layui-form-label">原始复选框</label>
+                                        <div class="layui-input-block">
+                                          <input type="checkbox" name="like1[write]" lay-skin="primary" title="写作" checked="">
+                                          <input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+                                          <input type="checkbox" name="like1[game]" lay-skin="primary" title="游戏" disabled="">
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="layui-form-item">
+                                        <label class="layui-form-label">开关-默认关</label>
+                                        <div class="layui-input-block">
+                                          <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+                                        </div>
+                                      </div>
+                                      <div class="layui-form-item">
+                                        <label class="layui-form-label">开关-默认开</label>
+                                        <div class="layui-input-block">
+                                          <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="ON|OFF">
+                                        </div>
+                                      </div>
+                                      <div class="layui-form-item">
+                                        <label class="layui-form-label">单选框</label>
+                                        <div class="layui-input-block">
+                                          <input type="radio" name="sex" value="男" title="男" checked="">
+                                          <input type="radio" name="sex" value="女" title="女">
+                                          <input type="radio" name="sex" value="禁" title="禁用" disabled="">
+                                        </div>
+                                      </div>
+                                      <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                          <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                                          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                        </div>
+                                      </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="test-table-operate-btn layui-btn-group layui-card-header">
+                            <button class="layui-btn layui-btn-danger" data-type="getCheckData">
+                                <i class="layui-icon" ></i>批量删除</button>
+                            <button class="layui-btn" id="addMerchant">
+                                <i class="layui-icon"></i>添加</button></div>
+                        <div class="layui-card-body ">
+
+                            <!-- 商家表格 -->
+                            <table class="layui-hide" id="merchant" lay-filter="test"></table>
+                            <script type="text/html" id="barDemo">
+                                <a style="display: none" class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+                                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                            </script>
+
+                        </div>
+                        <div class="layui-card-body ">
+                            <div class="page">
+                                <div>
+                                    <a class="prev" href="">&lt;&lt;</a>
+                                    <a class="num" href="">1</a>
+                                    <span class="current">2</span>
+                                    <a class="num" href="">3</a>
+                                    <a class="num" href="">489</a>
+                                    <a class="next" href="">&gt;&gt;</a></div>
+                            </div>
+                        </div>
+                    </div>
+<div class="layui-row" id="popUpdateTest" style="display: none">
+    <div class="layui-col-md10">
+        <form style="margin-left: 150px;margin-top: 20px;" id="formId" class="layui-form layui-form-pane" lay-filter="dataFrm" >
+            <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    <span class="x-red">*</span>商家名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="merchantname" name="merchantname" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    <span class="x-red">*</span>商家地址</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="merchantadd" lay-verify="required" autocomplete="off" class="layui-input">
+                    <span></span>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    <span class="x-red">*</span>商家成交数</label>
+                <div class="layui-input-inline select">
+                    <input type="text" name="fixturenum" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    <span class="x-red">*</span>商家评分</label>
+                <div class="layui-input-inline select">
+                    <input type="text"  name="grade" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" id="update">
+                <button class="layui-btn layui-btn-danger" lay-submit lay-filter="login" id="btn1" style="margin-left: 100px" type="submit">
+                    <i class="layui-icon"></i>修改</button>
+                <button class="layui-btn layui-btn-danger" lay-submit lay-filter="login" id="btn2" style="margin-left: 100px" type="submit">
+                    <i class="layui-icon"></i>添加</button>
+                <button class="layui-btn layui-btn-danger" lay-submit lay-filter="quxiao" id="btn3" style="margin-left: 40px" type="button">
+                    <i class="layui-icon"></i>取消</button>
+            </div>
+        </form>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        layui.use(['laydate', 'form','table'],function() {
+            var laydate = layui.laydate;
+            var table=layui.table;
+            var form=layui.form;
+            var $=layui.jquery;
+            //表格渲染
+            var tablepage=table.render({
+                elem:"#merchant"
+                ,height: 'auto'
+                ,url: 'consumer/merchant2' //数据接口
+                ,title: '商家表'
+                ,page: true //开启分页
+                ,toolbar: '#toolbarDemo' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+                ,totalRow: true //开启合计行
+                ,cols: [[ //表头
+                    {type: 'checkbox', fixed: 'left'}
+                    ,{field: 'merchantid', title: '商家编号', width:100,height: 200, sort: true,align:'center'}
+                    ,{field: 'merchantname', title: '商家名称', width:120,height: 200,align:'center'}
+                    ,{field: 'merchantadd', title: '商家地址',align:'center',height: 200, width: 120}
+                    ,{field: 'fixturenum', title: '商家成交数',align:'center',height: 200, width:80}
+                    ,{field: 'grade', title: '商家评分',align:'center',height: 200, width:80}
+                    ,{fixed: 'right', width: 200, align:'center',title: "操作", toolbar: '#barDemo'}
+                ]]
+            })
+            //监听行工具事件
+            table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+                var data = obj.data //获得当前行数据
+                    ,layEvent = obj.event; //获得 lay-event 对应的值
+                if(layEvent === 'detail'){      //查看信息
+                    layer.alert(JSON.stringify(data))
+                }else if(layEvent === 'edit'){   //进行编辑
+                    pageopen=layer.open({
+                        type: 1,
+                        title:"编辑商家",
+                        area: ['700px', '650px'],
+                        content:$("#popUpdateTest"),
+                        success:function () {
+                            $("#btn2").hide();
+                            $("#btn1").show();
+                            $("#btn3").show();
+                            form.val('dataFrm', data);
+                            form.on('submit(login)', function (data1) {
+                                var s = JSON.stringify(data1.field);
+                                layer.alert(data.merchantid+"")
+                                $.ajax({
+                                    url: "consumer/updateMerchant?merchantid="+data.merchantid,
+                                    type: "post",
+                                    dataType: "json",
+                                    contentType: "application/json",
+                                    data: s,
+                                    success: function (dda) {
+                                        if (dda==0){
+                                            layer.msg("修改失败！")
+                                        }else{
+                                            layer.msg("修改成功！")
+                                            layer.close(pageopen);
+                                            tablepage.reload();
+                                        }
+                                    }
+                                })
+                                return false;
+                            })
+                        }
+                    })
+                }else if(layEvent === 'del'){  //进行删除
+                    layer.confirm("真的删除行么",function (index) {
+                        $.ajax({
+                            url:"consumer/merchantDel?merchantid="+data.merchantid,
+                            type:"post",
+                            dataType:"json",
+                            success:function (dde) {
+                                if(dde==0){
+                                    layer.msg("该商家已有商品不能删除！");
+                                }else{
+                                    layer.msg("删除成功！");
+                                    obj.del();      //表给移除该行数据
+                                }
+                            }
+                        })
+                    })
+                }
+            })
+
+            //监听添加按钮
+            $("#addMerchant").click(function () {
+                $('#formId')[0].reset();
+                form.render();//必须写
+                pageopen=layer.open({
+                    type: 1,
+                    title:"添加商家",
+                    area: ['700px', '650px'],
+                    content:$("#popUpdateTest"),
+                    success:function () {
+                        $("#btn2").show();
+                        $("#btn1").hide();
+                        $("#btn3").hide();
+                        form.on('submit(login)',function (data) {
+                            var s=JSON.stringify(data.field);
+                            $.ajax({
+                                url:"consumer/merchant",
+                                type:"post",
+                                dataType:"json",
+                                contentType : "application/json",
+                                data:s,
+                                success:function (dda) {
+                                    if(dda==1){
+                                        layer.msg("添加成功！")
+                                        $('#formId')[0].reset();
+                                        form.render();//必须写
+                                    }else{
+                                        layer.msg("添加失败！")
+                                    }
+                                }
+                            })
+                            return false;
+                        })
+                    }
+                })
+            })
+
+            form.on("submit(quxiao)",function () {
+                layer.close(pageopen);
+            })
+            //监听表格复选框选择
+            table.on('checkbox(merchanth)', function(obj){
+                console.log(obj)
+            });
+            var $ = layui.$, active = {
+                getCheckData: function(){ //获取选中数据
+                    var checkStatus = table.checkStatus('merchant')   //放的是表格  elem: '#demo'
+                        ,data = checkStatus.data;
+                    layer.alert(JSON.stringify(data));
+                }
+            }
+
+            $('.test-table-operate-btn .layui-btn').on('click', function(){
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+
+
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#start' //指定元素
+            });
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#end' //指定元素
+            });
+        });
+
+        /*用户-停用*/
+        function member_stop(obj, id) {
+            layer.confirm('确认要停用吗？',
+            function(index) {
+
+                if ($(obj).attr('title') == '启用') {
+
+                    //发异步把用户状态进行更改
+                    $(obj).attr('title', '停用');
+                    $(obj).find('i').html('&#xe62f;');
+
+                    $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
+                    layer.msg('已停用!', {
+                        icon: 5,
+                        time: 1000
+                    });
+
+                } else {
+                    $(obj).attr('title', '启用');
+                    $(obj).find('i').html('&#xe601;');
+
+                    $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
+                    layer.msg('已启用!', {
+                        icon: 5,
+                        time: 1000
+                    });
+                }
+
+            });
+        }
+
+        /*用户-删除*/
+        function member_del(obj, id) {
+            layer.confirm('确认要删除吗？',
+            function(index) {
+                //发异步删除数据
+                $(obj).parents("tr").remove();
+                layer.msg('已删除!', {
+                    icon: 1,
+                    time: 1000
+                });
+            });
+        }
+
+        function delAll(argument) {
+
+            var data = tableCheck.getData();
+
+            layer.confirm('确认要删除吗？' + data,
+            function(index) {
+                //捉到所有被选中的，发异步进行删除
+                layer.msg('删除成功', {
+                    icon: 1
+                });
+                $(".layui-form-checked").not('.header').parents('tr').remove();
+            });
+        }
+    </script>
+</html>

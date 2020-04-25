@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 允许 JDBC 支持自动生成主键，需要驱动兼容。
+   如果设置为 true 则这个设置强制使用自动生成主键，尽管一些驱动不能兼容但仍可正常工作（比如 Derby）。
+   我写成了这样就不报错了 -->
+<mapper namespace="com.cssl.dao.HemaUserDao">
+    <select id="hemaUserFall" resultType="map">
+        SELECT a.`userid`,a.`loginname`,a.`userpwd`,a.`intergral`,a.`joindate`,b.`userstatus`,c.`gradename` FROM hemauser a,userstatus b,userrank c
+        WHERE a.`statusid`=b.`statusid` AND a.`gradeid`=c.`gradeid` ORDER BY a.`gradeid` DESC
+    </select>
+</mapper>

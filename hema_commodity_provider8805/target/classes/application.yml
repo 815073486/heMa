@@ -1,0 +1,38 @@
+server:
+  port: 8805
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/hemacommodity?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  application:
+    name: hema-provider-commodity    #注册到注册中心的名字
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+mybatis-plus:
+  typeAliasesPackage: com.cssl.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    auto-mapping-behavior: full
+    use-generated-keys: true
+  global-config:
+    db-config:
+      #主键类型  id_worker:"数据库ID自增" auto+@TableId:"可以获得主键值"
+      id-type: auto
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+      field-strategy: not_empty
+      #驼峰下划线转换
+      column-underline: false
+      #数据库大写下划线转换
+      #capital-mode: true
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+    refresh: true
+
+
