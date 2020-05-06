@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/comm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commodity-6662/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hema-index/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hema_commodity_consumer8806/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hema_commodity_provider8805/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hema_provider8803/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hemauser-6661/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-6663/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

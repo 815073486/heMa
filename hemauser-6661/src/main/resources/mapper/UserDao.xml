@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hemauser.userdao.UserDao">
+
+    <select id="phoneVerify" resultType="int">
+      SELECT COUNT(*) FROM hemauser WHERE loginname=#{phone}
+   </select>
+
+    <insert id="addUser">
+       INSERT INTO `hemauser`(`loginname`,`userpwd`)
+        VALUES(#{loginname},#{userpwd})
+    </insert>
+    <select id="login" resultType="int">
+        SELECT COUNT(*) FROM hemauser WHERE `loginname`=#{loginname} AND `userpwd`=#{userpwd}
+    </select>
+
+    <insert id="insert_Address">
+        INSERT INTO `address`(`loginname`,`consignee`,`consigneephone`,`addressname`)
+         VALUES (#{loginname},#{consignee},#{consigneephone},#{addressname})
+    </insert>
+
+    <select id="addressFadeAll" resultType="com.hemauser.Address">
+        SELECT * FROM `address` WHERE `loginname`=#{username} ORDER BY `addressid` DESC
+    </select>
+</mapper>

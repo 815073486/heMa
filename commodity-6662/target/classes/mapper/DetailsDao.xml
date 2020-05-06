@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.dao.DetailsDao">
+
+    <select id="commDetails" resultType="Map">
+        SELECT a.`commid`,a.`classifyid`,a.`merchantid`,`commname`,`rush`,`commimg`,commtime,`sales`,`presentation`,
+        (SELECT SUM(`stocknum`) FROM `parameter`  WHERE `commid`=#{cid}) AS stocksum,
+        (SELECT MIN(`price`) FROM `parameter` WHERE commid=#{cid}) AS minprice,
+        (SELECT MAX(`price`) FROM `parameter` WHERE commid=#{cid}) AS maxprice
+        FROM `commodity` AS a INNER JOIN `parameter` AS b ON(a.`commid`=b.`commid`)
+        WHERE a.`commid`=#{cid}
+        GROUP BY b.`commid`
+    </select>
+
+    <select id="imgFall" resultType="com.hemacommodity.Commimg">
+        SELECT * FROM `commimg` WHERE `commid`=#{cid}
+    </select>
+
+    <select id="parameterFall" resultType="com.hemacommodity.Parameter">
+        SELECT * FROM `parameter` WHERE `commid`=#{cid}
+    </select>
+
+    <select id="discussFall" resultType="com.hemacommodity.Discuss">
+      SELECT `merchantid`,`commid`,REPLACE(`loginname`, SUBSTR(`loginname`,4,4), 'XXXX') AS `loginname`,
+        `merchant`,`gradeid`,`distime` FROM discuss WHERE `commid`=#{cid}
+    </select>
+
+    <select id="recommend" resultType="Map">
+            SELECT a.`commid`,`commname`,`rush`,`commimg`,`price`  FROM `commodity` AS a INNER JOIN `parameter` AS b
+            ON(a.`commid`=b.`commid`)
+            WHERE `classifyid`=(SELECT `classifyid` FROM `commodity` WHERE `commid`=#{cid})
+            GROUP BY b.`commid`
+            ORDER BY commtime DESC
+    </select>
+
+    <select id="parFadeById" resultType="com.hemacommodity.Parameter">
+            SELECT * FROM `parameter` WHERE `parameterid`=#{pid}
+    </select>
+
+
+</mapper>

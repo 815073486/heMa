@@ -1,9 +1,7 @@
 package com.cssl.client;
 
 
-import com.cssl.entity.Admininfo;
-import com.cssl.entity.HemaUser;
-import com.cssl.entity.Userrank;
+import com.cssl.entity.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +34,7 @@ public interface AdmininfoClient {
      * @return
      */
     @RequestMapping("/updateHemaUser")
-    public int updateHemaUser(@RequestBody HemaUser hemaUser);
+    public int updateHemaUser(@RequestBody Hemauser hemaUser);
 
     /**
      * 删除前台用户
@@ -50,7 +48,37 @@ public interface AdmininfoClient {
      * 查询所有用户状态
      * @return
      */
-    @RequestMapping("/UserrankFall")
-    public List<Userrank> UserrankFall();
+    @RequestMapping("/userstatusFall")
+    public List<Userstatus> userstatusFall();
+
+    /**
+     * 查看所有订单
+     * @return
+     */
+    @RequestMapping("/orderFall")
+    public List<Map<String,Object>> advancedSelectOrder(@RequestParam Map<String,Object> map);
+
+    /**
+     * 修改订单
+     * @param order
+     * @return
+     */
+    @RequestMapping("/updateOrder")
+    public int updateOrder(@RequestBody Order order);
+
+    /**
+     * 修改订单地址
+     * @param address
+     * @return
+     */
+    @RequestMapping("/updateAddress")
+    public int updateAddress(@RequestBody Address address);
+
+    /**
+     * 查看所有订单状态
+     * @return
+     */
+    @RequestMapping("/OrderstateFall")
+    public List<Orderstate> OrderstateFall();
 
 }

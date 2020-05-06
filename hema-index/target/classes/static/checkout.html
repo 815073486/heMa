@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicons Icon -->
+    <title>Brezza </title>
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/revslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link href="css/ac2ae5775c664fb682a6b10e460efad2.css" rel="stylesheet" />
+    <!-- 引入头部 -->
+    <link rel="import" href="header.html" id="header">
+    <!-- 引入底部 -->
+    <link rel="import" href="footer.html" id="footer">
+</head>
+<body class="checkout-page"  onload="setup();preselect('北京市');promptinfo();">
+<div id="page">
+    <!-- header -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- Header Language -->
+                        <div class="col-xs-12 col-sm-6">
+
+                        </div>
+                        <div class="col-xs-6 hidden-xs">
+                            <!-- Header Top Links -->
+                            <div class="toplinks">
+                                <div class="links">
+                                    <div class="login">
+                                        <a href="login.html"><span class="hidden-xs">登陆/切换用户</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Header Top Links -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo-block">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a title="Brezza" href="index.html"><img alt="Brezza Logo" src="picture/logo.png" /></a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- 上方搜索框 -->
+                    <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+                        <div class="search-box">
+                            <form action="cat" method="POST" id="search_mini_form" name="Categories">
+                                <input type="text" placeholder="查找更多..." maxlength="70" name="search" id="search" />
+                                <button type="button" id="commbtn" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 mgk-top-cart">
+
+                        <div class="top-cart-contain pull-right">
+
+
+                            <!-- Top Cart -->
+                            <!-- 购物车 -->
+                            <div class="mini-cart">
+                                <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+                                    <a href="shopping_cart.html"><span class="cart_count"></span><span class="cart-title hidden-xs hidden-sm">我的 car/</span>
+                                        <span class="price hidden-xs">￥金额</span></a>
+                                </div>
+                                <div>
+                                    <div class="top-cart-content">
+                                        <ul class="mini-products-list" id="cart-sidebar" >
+
+
+                                            <li class="item" th:each="car,carstat:${session.carlist}">
+                                                <div class="item-inner">
+                                                    <a class="product-image" title="Retis lapen casen" th:href="@{'../commDetails?cid='+${car.commid}}">
+                                                        <img alt="Retis lapen casen" th:attr="src=${car.commimg}" /></a>
+                                                    <div class="product-details">
+                                                        <div class="access">
+                                                            <a class="btn-remove1" title="Remove This Item" th:attr="id='car'+${car.mycarid}" th:onclick="|del(${car.mycarid})|">
+                                                                删除该商品</a>
+                                                        </div>
+                                                        <strong th:text="${car.commsum}"></strong>份
+
+                                                        <span style="color: red">￥</span><span class="price" th:text="${car.price}"></span>
+                                                        <p class="product-name"><a th:href="@{'../commDetails?cid='+${car.commid}}" th:text="${car.commname}"></a></p>
+                                                    </div>
+                                                </div></li>
+
+
+                                        </ul>
+                                        <div class="actions">
+                                            <a href="../insertCar" class="view-cart"><i class="fa fa-shopping-cart"></i><span>查看我的购物车</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--购物车结束 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="mm-toggle-wrap">
+                    <div class="mm-toggle">
+                        <i class="fa fa-align-justify"></i>
+                        <span class="mm-label">Menu</span>
+                    </div>
+                </div>
+
+
+                <!--  头部导航栏  -->
+                <div class="nav-inner" id="app">
+                    <ul id="nav" class="hidden-xs" th:each="verify,v:${session.dh}" style="display: inline-block">
+                        <!--  蔬菜  -->
+                        <li class="mega-menu" id="head" th:if="${verify.classifyid eq verify.fatherid}">
+                            <!-- 根据分类进行查询未添加 -->
+                            <a class="level-top"><span th:text="${verify.classifyname}">  </span></a>
+                            <div class="level0-wrapper dropdown-6col" style="margin-right: 200px">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center">
+                                            <ul class="level0" >
+                                                <li class="level3 parent item"><a href="../mumeFall"><span>Brezza</span></a>
+                                                    <ul class="level1" th:each="ver,v:${session.dh}">
+                                                        <li th:if="${verify.classifyid eq ver.fatherid&&ver.classifyid != ver.fatherid}">
+                                                            <a th:href="@{'../comm_by_classifyid?classifyid='+${ver.classifyid}}">
+                                                                <span th:text="${ver.classifyname}"></span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End nav -->
+    </header>
+    <!-- main-container -->
+    <div class="main-container col2-right-layout">
+        <div class="main container">
+            <div class="row">
+                <section class="col-sm-9 col-xs-12">
+                    <div class="col-main">
+                        <div class="page-title">
+                            <h1>收货地址</h1>
+                        </div>
+                        <ol class="one-page-checkout" id="checkoutSteps">
+                            <li id="opc-billing" class="section allow active">
+
+                                <form name="shareip" action="" method="post">
+                                    <span style="color: red;size:50px">选择省市:</span>
+                                    <select class="select" name="province" id="s1">
+                                        <option></option>
+                                    </select>
+                                    <select class="select" name="city" id="s2">
+                                        <option></option>
+                                    </select>
+                                    <select class="select" name="town" id="s3">
+                                        <option></option>
+                                    </select>
+
+                                </form>
+
+                                </li>
+
+                            <li  class="section">
+                                <span style="color: red;size:50px">详细地址:</span>
+                                    <input type="text" style="width: 300px" id="city"/>
+                            </li>
+                            <li id="b" class="section">
+                                <span style="color: red;size:50px" >收货姓名:</span>
+                                <input type="text" style="width: 100px" id="username"/>
+                            </li>
+                            <li id="a" class="section">
+                                <span style="color: red;size:50px">收货电话:</span>
+                                <input type="text" style="width: 100px" id="phone"/>
+                            </li>
+                            <li id="opc-shipping_method" class="section">
+                                <div class="custom pull-left">
+                                    <span style="color: red;size:50px">点击新增:</span>
+                                    <button  style="color: #2D3D4C;width: 100px; height: 30px" class="reduced items-count" type="button"
+                                             id="addbtn">
+                                    新增
+                                    </button>
+
+                                    &nbsp; &nbsp;</div>
+                            <li>
+                            <br/>
+                            <br/>
+                            <h5 ><strong style="color: grey">选择我的收货地址>>>>>>直接下单</strong></h5>
+                                <div class="pull-left" th:each="address,a:${session.addresslist}">
+
+
+                                    <div class="custom pull-left">
+                                        <a th:href="@{'../insertOrder?addid='+${address.getAddressid()}}">
+                                        <button  style="color: #2D3D4C;width: 700px; height: 50px" class="reduced items-count" type="button">
+                                            <<span style="color: red">地址：</span><span th:text="${address.getAddressname()}"></span>
+                                           &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                            <span style="color: red">姓名：</span><span th:text="${address.getConsignee()}"></span>
+                                            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                            <span style="color: red">电话：</span><span th:text="${address.getConsigneephone()}"></span>>
+                                        </button>
+                                        </a>
+                                        &nbsp; &nbsp;</div>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+
+
+                                </div>
+                            </li>
+
+                        </ol>
+                    </div>
+                </section>
+                <aside class="col-right sidebar col-sm-3 col-xs-12">
+                    <div class="block block-account">
+                        <div class="block-title">
+                            My Account
+                        </div>
+
+                        <div class="block-content">
+                            <ul>
+                                <li><a href="../mumeFall">全部商品</a></li>
+                                <li><a href="../show_Car">购物车</a></li>
+                                <li class="current"><a href="../addressFadeAll?cid=0">地址管理</a></li>
+                                <li><a href="../order_FadeAll" >我的订单</a></li>
+                                <li><a href="../myLove?cid=0">My Love</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+
+    <script type="text/javascript">
+        document.write(footer.import.body.innerHTML);
+    </script>
+
+</div>
+
+<!-- JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.mobile-menu.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/geo.js"></script>
+<script type="text/javascript">
+    function promptinfo()
+    {
+        var address = document.getElementById('address').value;
+        var s1 = document.getElementById('s1').value;
+        var s2 = document.getElementById('s2').value;
+        var s3 = document.getElementById('s3').value;
+        address=""+s1+ s2 + s3;
+        return address;
+    }
+
+    $(function () {
+            $("#addbtn").click(function () {
+                var add=$("#s1").val()+$("#s2").val()+$("#s3").val()+$("#city").val();
+                if(add==""||$("#username").val()==""||$("#phone").val()==""){
+                    alert("地址信息均不能为空！！！");
+                }else{
+                    $.post("../insert_Address",{"consignee":$("#username").val(),"consigneephone":$("#phone").val()
+                    ,"addressname":add},function (e) {
+                            if(e>0){
+                                location.href="../addressFadeAll?cid=0";
+                            }else{
+                                alert("新增失败！！！");
+                            }
+
+                    });
+                }
+            })
+    })
+
+</script>
+</body>
+</html>

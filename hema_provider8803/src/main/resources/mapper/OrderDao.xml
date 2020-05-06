@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 允许 JDBC 支持自动生成主键，需要驱动兼容。
+   如果设置为 true 则这个设置强制使用自动生成主键，尽管一些驱动不能兼容但仍可正常工作（比如 Derby）。
+   我写成了这样就不报错了 -->
+<mapper namespace="com.cssl.dao.OrderDao">
+
+    <select id="advancedSelectOrder" resultType="map">
+        SELECT a.orderid,a.ordernum,a.`loginname`,b.addressname,a.ordertime,c.statename,c.stateid,b.consignee,b.consigneephone,b.addressname,a.addressid FROM `order` a,address b,orderstate c
+        WHERE a.addressid=b.`addressid` AND a.`stateid`=c.stateid
+        LIMIT ${page},${pageindex}
+    </select>
+
+    <update id="orderUpdate">
+        update `order` set stateid=#{stateid} where orderid=#{orderid}
+    </update>
+
+</mapper>

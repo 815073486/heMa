@@ -6,10 +6,6 @@
    如果设置为 true 则这个设置强制使用自动生成主键，尽管一些驱动不能兼容但仍可正常工作（比如 Derby）。
    我写成了这样就不报错了 -->
 <mapper namespace="com.cssl.dao.CommodityDao">
-    <select id="selectCommodity" resultType="map">
-        SELECT commid,commname,classifyname,merchantname,commimg,rush,commtime,a.classifyid,a.merchantid,b.fatherid FROM `commodity` a,classify b,merchant c
-        WHERE a.classifyid=b.classifyid AND a.merchantid=c.merchantid ORDER BY commid DESC
-    </select>
 
     <sql id="ss">
         <if test="commid!=0">
@@ -31,10 +27,14 @@
         WHERE a.classifyid=b.classifyid AND a.merchantid=c.merchantid <include refid="ss"></include>
         ORDER BY commid DESC
     </select>
-    
+
     <select id="advancedSelectCommodity" resultType="map">
         SELECT commid,commname,classifyname,merchantname,commimg,rush,commtime,a.classifyid,a.merchantid,b.fatherid,presentation FROM `commodity` a,classify b,merchant c
         WHERE a.classifyid=b.classifyid AND a.merchantid=c.merchantid <include refid="ss"></include>
         ORDER BY commid DESC
+        LIMIT ${page},${pageindex}
+    </select>
+    <select id="commodityConut" resultType="int">
+        SELECT COUNT(*) FROM `commodity` a,classify b,merchant c  WHERE a.classifyid=b.classifyid AND a.merchantid=c.merchantid
     </select>
 </mapper>

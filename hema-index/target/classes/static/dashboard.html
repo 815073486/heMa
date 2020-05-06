@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicons Icon -->
+    <title>Brezza - Fruit Store Multipurpose HTML Template</title>
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/revslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link href="css/ac2ae5775c664fb682a6b10e460efad2.css" rel="stylesheet" />
+    <!-- 引入底部 -->
+    <link rel="import" href="footer.html" id="footer">
+</head>
+<body class="dashboard-page">
+<div id="page">
+    <!-- header -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- Header Language -->
+                        <div class="col-xs-12 col-sm-6">
+
+                        </div>
+                        <div class="col-xs-6 hidden-xs">
+                            <!-- Header Top Links -->
+                            <div class="toplinks">
+                                <div class="links">
+                                    <div class="login">
+                                        <a href="login.html"><span class="hidden-xs">登陆/切换用户</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Header Top Links -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo-block">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a title="Brezza" href="index.html"><img alt="Brezza Logo" src="picture/logo.png" /></a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- 上方搜索框 -->
+                    <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+                        <div class="search-box">
+                            <form action="cat" method="POST" id="search_mini_form" name="Categories">
+                                <input type="text" placeholder="查找更多..." maxlength="70" name="search" id="search" />
+                                <button type="button" id="commbtn" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 mgk-top-cart">
+
+                        <div class="top-cart-contain pull-right">
+
+
+                            <!-- Top Cart -->
+                            <!-- 购物车 -->
+                            <div class="mini-cart">
+                                <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+                                    <a href="shopping_cart.html"><span class="cart_count"></span><span class="cart-title hidden-xs hidden-sm">我的 car/</span>
+                                        <span class="price hidden-xs">￥金额</span></a>
+                                </div>
+                                <div>
+                                    <div class="top-cart-content">
+                                        <ul class="mini-products-list" id="cart-sidebar" >
+
+
+                                            <li class="item" th:each="car,carstat:${session.carlist}">
+                                                <div class="item-inner">
+                                                    <a class="product-image" title="Retis lapen casen" th:href="@{'../commDetails?cid='+${car.commid}}">
+                                                        <img alt="Retis lapen casen" th:attr="src=${car.commimg}" /></a>
+                                                    <div class="product-details">
+                                                        <div class="access">
+                                                            <a class="btn-remove1" title="Remove This Item" th:attr="id='car'+${car.mycarid}" th:onclick="|del(${car.mycarid})|">
+                                                                删除该商品</a>
+                                                        </div>
+                                                        <strong th:text="${car.commsum}"></strong>份
+
+                                                        <span style="color: red">￥</span><span class="price" th:text="${car.price}"></span>
+                                                        <p class="product-name"><a th:href="@{'../commDetails?cid='+${car.commid}}" th:text="${car.commname}"></a></p>
+                                                    </div>
+                                                </div></li>
+
+
+                                        </ul>
+                                        <div class="actions">
+                                            <a href="../insertCar" class="view-cart"><i class="fa fa-shopping-cart"></i><span>查看我的购物车</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--购物车结束 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="mm-toggle-wrap">
+                    <div class="mm-toggle">
+                        <i class="fa fa-align-justify"></i>
+                        <span class="mm-label">Menu</span>
+                    </div>
+                </div>
+
+
+                <!--  头部导航栏  -->
+                <div class="nav-inner" id="app">
+                    <ul id="nav" class="hidden-xs" th:each="verify,v:${session.dh}" style="display: inline-block">
+                        <!--  蔬菜  -->
+                        <li class="mega-menu" id="head" th:if="${verify.classifyid eq verify.fatherid}">
+                            <!-- 根据分类进行查询未添加 -->
+                            <a class="level-top"><span th:text="${verify.classifyname}">  </span></a>
+                            <div class="level0-wrapper dropdown-6col" style="margin-right: 200px">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center">
+                                            <ul class="level0" >
+                                                <li class="level3 parent item"><a href="../mumeFall"><span>Brezza</span></a>
+                                                    <ul class="level1" th:each="ver,v:${session.dh}">
+                                                        <li th:if="${verify.classifyid eq ver.fatherid&&ver.classifyid != ver.fatherid}">
+                                                            <a th:href="@{'../comm_by_classifyid?classifyid='+${ver.classifyid}}">
+                                                                <span th:text="${ver.classifyname}"></span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End nav -->
+    </header>
+    <div class="main-container col2-right-layout">
+        <div class="main container">
+            <div class="row">
+                <section class="col-sm-9 col-xs-12">
+                    <div class="col-main">
+                        <div class="dashboard">
+
+                            <div class="recent-orders">
+                                <div class="table-responsive">
+                                    <table class="data-table" id="my-orders-table">
+                                        <thead>
+                                        <tr class="first last">
+                                            <th>订单编号</th>
+                                            <th>商品图片</th>
+                                            <th>商品名称</th>
+                                            <th>总金额</th>
+                                            <th><span class="nobr">下单时间</span></th>
+                                            <th>订单状态</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody th:each="ol,rlstat:${session.orderlist}">
+                                        <tr class="first odd">
+                                            <td th:text="${ol.getOrdernum()}"></td>
+                                            <td>
+                                                <a th:each="oc,ocstat:${session.order_commlist}">
+                                                <a th:if="${ol.getOrdernum() eq oc.getOrdernum()}" th:href="@{'../commDetails?cid='+${oc.getCommid()}}">
+                                                <img alt="Retis lapen casen" th:attr="src=${oc.getCommimg()}" style="width: 60px;height: 60px"/>
+                                                <br/>
+                                                    <br/>
+                                                </a></a>
+                                            <td>
+                                            <a th:each="oc,ocstat:${session.order_commlist}">
+                                                <a th:if="${ol.getOrdernum() eq oc.getOrdernum()}" th:href="@{'../commDetails?cid='+${oc.getCommid()}}">
+                                                    <span th:text="${oc.getCommname()}"></span>*
+                                                    <sapn th:text="${oc.getOrdercommsum()}"></sapn>
+                                                    <br/>
+                                                    <br/>
+                                                    <br/>
+                                                    <br/>
+                                                </a>
+                                            </a>
+                                            </td>
+                                                <td>
+                                                    <a th:each="oc,ocstat:${session.order_commlist}">
+                                                    <a th:if="${ol.getOrdernum() eq oc.getOrdernum()}" href="shopping_cart.html">
+                                                        <span class="price" th:text="${oc.getOdert_comm_summoney()}"></span>
+                                                        <br/>
+                                                        <br/>
+                                                        <br/>
+                                                        <br/>
+                                                    </a>
+                                                    </a>
+
+                                                </td>
+                                            </a>
+
+                                            <td th:text="${ol.getOrdertime()}"></td>
+                                            <td ><em th:if="${ol.getStateid() eq 1}">
+                                                等待商家发货
+                                            </em>
+                                                <em th:if="${ol.getStateid() eq 2}">
+                                                    商家已经发货
+                                                </em>
+                                                <em th:if="${ol.getStateid() eq 5}">
+                                                    交易已完成
+                                                </em>
+                                                <em th:if="${ol.getStateid() eq 6}">
+                                                    订单已取消
+                                                </em>
+
+                                            </td>
+
+                                            <td class="a-center last" >
+                                                <span class="nobr" th:if="${ol.getStateid() eq 1}">
+                                                    <a th:href="@{'../upt_Order_State?orderid='+${ol.getOrderid()}+'&stateid=6'}">取消订单</a></span>
+
+                                                <span class="nobr" th:if="${ol.getStateid() eq 2}">
+                                                    <a th:href="@{'../upt_Order_State?orderid='+${ol.getOrderid()}+'&stateid=5'}">确认收货</a></span>
+                                            </td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <aside class="col-right sidebar col-sm-3">
+                    <div class="block block-account">
+                        <div class="block-title">
+                            My Account
+                        </div>
+
+                        <div class="block-content">
+                            <ul>
+                                <li><a href="../mumeFall">全部商品</a></li>
+                                <li><a href="../show_Car">购物车</a></li>
+                                <li><a href="../addressFadeAll?cid=0"  class="current">地址管理</a></li>
+                                <li class="current"><a href="../order_FadeAll" >我的订单</a></li>
+                                <li><a href="../myLove?cid=0">My Love</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <script type="text/javascript">
+        document.write(footer.import.body.innerHTML);
+    </script>
+    <!-- End Footer -->
+</div>
+
+<!-- JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.mobile-menu.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

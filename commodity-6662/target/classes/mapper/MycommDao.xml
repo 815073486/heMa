@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.dao.MyCommDao">
+    <insert id="myLove">
+        INSERT INTO `mylove`(`loginname`,`commid`) VALUE(#{loginname},#{commid});
+    </insert>
+
+    <select id="loveFall" resultType="Map">
+            SELECT a.`commid`,`commname`,`rush`,`commimg`,`price`,loveid  FROM `commodity` AS a INNER JOIN `parameter` AS b
+            ON(a.`commid`=b.`commid`) INNER JOIN `mylove` AS c
+            ON(a.`commid`=c.`commid`)
+            WHERE a.commid IN (SELECT `commid` FROM `mylove` WHERE `loginname`=#{loginname})
+            GROUP BY b.`commid`
+            ORDER BY `lovetime` DESC
+    </select>
+
+    <select id="fadeByid" resultType="int">
+        SELECT COUNT(*) FROM `mylove` WHERE `commid`=#{commid} AND `loginname`=#{loginname}
+    </select>
+
+    <update id="updateTime">
+        UPDATE `mylove` SET `lovetime`=SYSDATE() WHERE commid=#{commid} AND `loginname`=#{loginname}
+    </update>
+
+    <delete id="delLoveById">
+            DELETE FROM `mylove` WHERE `loveid`=#{loveid}
+    </delete>
+
+    <delete id="delLoveFall">
+        DELETE FROM `mylove` WHERE `loginname`=#{loginname}
+    </delete>
+
+    <insert id="insertCar">
+        INSERT INTO `mycar`(`commsum`,`loginname`,`parameterid`)
+        VALUES(#{commsum},#{loginname},#{parameterid})
+    </insert>
+
+    <select id="carParCount" resultType="int">
+        SELECT COUNT(*) FROM `mycar` WHERE `loginname`=#{loginname} AND `parameterid`=#{parameterid}
+    </select>
+
+    <update id="uptSum">
+        UPDATE `mycar` SET `commsum`=`commsum`+#{commsum},`cartime`=SYSDATE() WHERE `parameterid`=#{parameterid} AND `loginname`=#{loginname}
+    </update>
+
+    <select id="carFadeAll" resultType="Map">
+        SELECT a.`commid` AS commid,`mycarid`,`commname`,c.`parameterid` AS parameterid,`commimg`,`parameter`,`commsum`,FORMAT(b.`price`*`commsum`,2) as price  FROM `commodity` AS a
+        INNER JOIN `parameter` AS b ON(a.`commid`=b.`commid`) INNER JOIN `mycar` AS c
+        ON(b.`parameterid`=c.`parameterid`) WHERE `loginname`=#{loginname}
+        ORDER BY `cartime` DESC
+    </select>
+
+    <select id="carFadeByID" resultType="Map">
+        SELECT a.`commid` AS commid,`mycarid`,`commname`,c.`parameterid` AS parameterid,`commimg`,`parameter`,`commsum`,FORMAT(b.`price`*`commsum`,2) AS price  FROM `commodity` AS a
+        INNER JOIN `parameter` AS b ON(a.`commid`=b.`commid`) INNER JOIN `mycar` AS c
+        ON(b.`parameterid`=c.`parameterid`) WHERE `mycarid`=#{carid}
+    </select>
+
+    <select id="totalMoney" resultType="string">
+        SELECT FORMAT(SUM(b.`price`*`commsum`),2) AS totalmoney FROM `commodity` AS a
+        INNER JOIN `parameter` AS b ON(a.`commid`=b.`commid`) INNER JOIN `mycar` AS c
+        ON(b.`parameterid`=c.`parameterid`) WHERE `loginname`=#{loginname}
+    </select>
+
+    <delete id="delCar">
+        DELETE FROM `mycar` WHERE `mycarid`=#{cid}
+    </delete>
+
+    <update id="uptCarCommSum">
+        UPDATE `mycar` SET `commsum`=#{commsum}  WHERE `mycarid`=#{mycarid} AND `loginname`=#{loginname}
+    </update>
+
+    <select id="totalMoneyFadeById" resultType="string">
+    SELECT  FORMAT(b.`price`*`commsum`,2) AS totalmoney FROM `commodity` AS a
+    INNER JOIN `parameter` AS b ON(a.`commid`=b.`commid`) INNER JOIN `mycar` AS c
+    ON(b.`parameterid`=c.`parameterid`)
+    WHERE `loginname`=#{loginname} AND `mycarid`=#{mycarid}
+    </select>
+</mapper>

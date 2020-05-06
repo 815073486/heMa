@@ -3,10 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/comm/comm.iml" filepath="$PROJECT_DIR$/comm/comm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commodity-6662/commodity-6662.iml" filepath="$PROJECT_DIR$/commodity-6662/commodity-6662.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/heMa.iml" filepath="$PROJECT_DIR$/.idea/heMa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hema-index/hema-index.iml" filepath="$PROJECT_DIR$/hema-index/hema-index.iml" />
       <module fileurl="file://$PROJECT_DIR$/hema_commodity_consumer8806/hema_commodity_consumer8806.iml" filepath="$PROJECT_DIR$/hema_commodity_consumer8806/hema_commodity_consumer8806.iml" />
       <module fileurl="file://$PROJECT_DIR$/hema_commodity_provider8805/hema_commodity_provider8805.iml" filepath="$PROJECT_DIR$/hema_commodity_provider8805/hema_commodity_provider8805.iml" />
       <module fileurl="file://$PROJECT_DIR$/hema_provider8803/hema_provider8803.iml" filepath="$PROJECT_DIR$/hema_provider8803/hema_provider8803.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hemauser-6661/hemauser-6661.iml" filepath="$PROJECT_DIR$/hemauser-6661/hemauser-6661.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-6663/order-6663.iml" filepath="$PROJECT_DIR$/order-6663/order-6663.iml" />
     </modules>
   </component>
 </project>

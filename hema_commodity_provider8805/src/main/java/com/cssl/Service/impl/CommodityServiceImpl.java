@@ -31,15 +31,7 @@ public class CommodityServiceImpl extends ServiceImpl<CommodityDao, Commodity> i
         return cDao.insert(commodity);
     }
 
-    /**
-     * 查询所有商品
-     * @return
-     */
-    @Override
-    public List<Map<String, Object>> selectCommodity() {
 
-        return cDao.selectCommodity();
-    }
 
     /**
      * 查询单个商品
@@ -86,6 +78,11 @@ public class CommodityServiceImpl extends ServiceImpl<CommodityDao, Commodity> i
     public List<Map<String, Object>> advancedSelectCommodity(Map<String,Object> map) {
 
         return cDao.advancedSelectCommodity(map);
+    }
+
+    @Override
+    public int commodityConut() {
+        return cDao.commodityConut();
     }
 
 

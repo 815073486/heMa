@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicons Icon -->
+    <title>Brezza - Fruit Store Multipurpose HTML Template</title>
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/revslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link href="css/ac2ae5775c664fb682a6b10e460efad2.css" rel="stylesheet" />
+    <!-- 引入底部 -->
+    <link rel="import" href="footer.html" id="footer">
+</head>
+<body>
+<div id="page">
+    <!-- header -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- Header Language -->
+                        <div class="col-xs-12 col-sm-6">
+
+                        </div>
+                        <div class="col-xs-6 hidden-xs">
+                            <!-- Header Top Links -->
+                            <div class="toplinks">
+                                <div class="links">
+                                    <div class="login">
+                                        <a href="login.html"><span class="hidden-xs">登陆/切换用户</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Header Top Links -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo-block">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a title="Brezza" href="index.html"><img alt="Brezza Logo" src="picture/logo.png" /></a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- 上方搜索框 -->
+                    <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+                        <div class="search-box">
+                            <form action="cat" method="POST" id="search_mini_form" name="Categories">
+                                <input type="text" placeholder="查找更多..." maxlength="70" name="search" id="search" />
+                                <button type="button" id="commbtn" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 mgk-top-cart">
+
+                        <div class="top-cart-contain pull-right">
+
+
+                            <!-- Top Cart -->
+                            <!-- 购物车 -->
+                            <div class="mini-cart">
+                                <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+                                    <a href="shopping_cart.html"><span class="cart_count"></span><span class="cart-title hidden-xs hidden-sm">我的 car/</span>
+                                        <span class="price hidden-xs">￥金额</span></a>
+                                </div>
+                                <div>
+                                    <div class="top-cart-content">
+                                        <ul class="mini-products-list" id="cart-sidebar" >
+
+
+                                            <li class="item" th:each="car,carstat:${session.carlist}">
+                                                <div class="item-inner">
+                                                    <a class="product-image" title="Retis lapen casen" th:href="@{'../commDetails?cid='+${car.commid}}">
+                                                        <img alt="Retis lapen casen" th:attr="src=${car.commimg}" /></a>
+                                                    <div class="product-details">
+                                                        <div class="access">
+                                                            <a class="btn-remove1" title="Remove This Item" th:attr="id='car'+${car.mycarid}" th:onclick="|del(${car.mycarid})|">
+                                                                删除该商品</a>
+                                                        </div>
+                                                        <strong th:text="${car.commsum}"></strong>份
+
+                                                        <span style="color: red">￥</span><span class="price" th:text="${car.price}"></span>
+                                                        <p class="product-name"><a th:href="@{'../commDetails?cid='+${car.commid}}" th:text="${car.commname}"></a></p>
+                                                    </div>
+                                                </div></li>
+
+
+                                        </ul>
+                                        <div class="actions">
+                                            <a href="../insertCar" class="view-cart"><i class="fa fa-shopping-cart"></i><span>查看我的购物车</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--购物车结束 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="mm-toggle-wrap">
+                    <div class="mm-toggle">
+                        <i class="fa fa-align-justify"></i>
+                        <span class="mm-label">Menu</span>
+                    </div>
+                </div>
+
+
+                <!--  头部导航栏  -->
+                <div class="nav-inner" id="app">
+                    <ul id="nav" class="hidden-xs" th:each="verify,v:${session.dh}" style="display: inline-block">
+                        <!--  蔬菜  -->
+                        <li class="mega-menu" id="head" th:if="${verify.classifyid eq verify.fatherid}">
+                            <!-- 根据分类进行查询未添加 -->
+                            <a class="level-top"><span th:text="${verify.classifyname}">  </span></a>
+                            <div class="level0-wrapper dropdown-6col" style="margin-right: 200px">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center">
+                                            <ul class="level0" >
+                                                <li class="level3 parent item"><a href="../mumeFall"><span>Brezza</span></a>
+                                                    <ul class="level1" th:each="ver,v:${session.dh}">
+                                                        <li th:if="${verify.classifyid eq ver.fatherid&&ver.classifyid != ver.fatherid}">
+                                                            <a th:href="@{'../comm_by_classifyid?classifyid='+${ver.classifyid}}">
+                                                                <span th:text="${ver.classifyname}"></span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End nav -->
+    </header>
+
+
+
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul>
+                        <li class="home"><a href="index.html">主页</a><span>/</span></li>
+                        <li><a href="grid.html">商品详情</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumbs End -->
+    <!-- Main Container -->
+    <section class="main-container col1-layout">
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-main">
+                        <div class="product-view">
+                            <div class="product-essential">
+                                <form action="#" method="post" id="product_addtocart_form">
+                                    <div class="product-img-box col-lg-4 col-sm-5 col-xs-12">
+                                        <div class="new-label new-top-left">
+                                            New
+                                        </div>
+                                        <div class="product-image">
+                                            <div class="product-full">
+                                                <img id="product-zoom"  th:attr="src=${session.dcomm.commimg}" alt="product-image" />
+                                                <!-- 页面原样式 -->
+                                                <!--<img id="product-zoom"  th:attr="src=${session.dcomm.commimg}" th:attr="data-zoom-image=${session.dcomm.commimg}" alt="product-image" />-->
+                                            </div>
+                                            <div class="more-views">
+                                                <div class="slider-items-products">
+                                                    <div id="gallery_01" class="product-flexslider hidden-buttons product-img-thumb">
+
+
+                                                        <!--  商品展示图片 -->
+                                                        <div class="slider-items slider-width-col4 block-content">
+                                                            <div class="more-views-items"   th:each="c,imgStat:${session.cimg}">
+                                                                <a href="#" th:attr="data-image=${c.getImg()}"><img th:attr="src=${c.getImg()}" alt="product-image"/></a>
+                                                            </div>
+
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end: more-images -->
+                                    </div>
+                                    <div class="product-shop col-lg-8 col-sm-7 col-xs-12">
+                                        <div class="product-next-prev">
+                                            <a class="product-next" href="#"><span></span></a>
+                                            <a class="product-prev" href="#"><span></span></a>
+                                        </div>
+                                        <div class="product-name">
+                                            <h1 th:text="${session.dcomm.commname}"></h1>
+                                        </div>
+                                        <div class="ratings">
+                                            <p class="rating-links"><a href="#">商品库存</a><span class="separator">|</span><a id="kucun" th:text="${session.dcomm.stocksum}"></a></p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <p class="rating-links">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">商品销量</a><span class="separator">|</span><a id="kucun" th:text="${session.dcomm.sales}"></a></p>
+                                        </div>
+                                        <div class="price-block">
+                                            <div class="price-box">
+
+
+                                                <p class="special-price" id="minprice"><span id="minp" class="price">
+                                                    <span>￥:</span><a style="color: red" th:text="${session.dcomm.minprice}"></a></span></p>
+
+                                                <span th:if="${session.dcomm.minprice != session.dcomm.maxprice}">
+                                                     <p class="special-price" id="maxprice"><span>~</span>
+                                                    <span id="maxp" class="price"><a style="color: red" th:text="${session.dcomm.maxprice}"></a></span>
+                                                     </p>
+                                                </span>
+
+                                                <!-- 展示折价后的商品原价 -->
+                                                <!--<p class="old-price"><span class="price-label">Regular Price:</span><span class="price">$315.99</span></p>-->
+                                                <!-- 判断商品是否有货 -->
+                                                <p class="availability in-stock pull-right" id="yeshave" th:if="${session.dcomm.stocksum>0}">
+                                                    <span>现货</span>
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- 商品简介 -->
+                                        <div class="short-description">
+                                            <h2>商品简介</h2>
+                                            <p th:text="${session.dcomm.presentation}"></p>
+
+                                        </div>
+
+                                        <div class="add-to-box">
+                                            <div class="add-to-cart">
+                                                <div class="pull-left">
+                                                    <div class="custom pull-left">
+                                                        <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) result.value--;return false;" class="reduced items-count" type="button"><i class="fa fa-minus">&nbsp;</i></button>
+                                                        <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty" name="qty" readonly="readonly"/>
+                                                        <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
+                                                    </div>
+                                                </div>
+                                                <span th:if="${session.dcomm.stocksum>0}">
+                                                <button class="button btn-cart" title="Add to Cart" type="button" id="btncar">添加到 My Cart</button>
+                                                </span>
+
+                                            </div>
+                                            <div class="email-addto-box">
+                                                <ul class="add-to-links">
+                                                    <li><a class="link-wishlist" th:href="@{'../myLove?cid='+${session.dcomm.commid}}"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- 下方通讯小图标 -->
+
+                                        <div class="pull-left">
+                                            <h5 ><strong>商品参数</strong></h5>
+                                            <div class="custom pull-left" th:each="p,parstat:${session.parlist}">
+                                                <button  style="color: #2D3D4C;width: 60px; height: 35px" class="reduced items-count" type="button" th:onclick="|test(${p.parameterid})|" th:text="${p.getParameter()}"></button>
+                                                &nbsp; &nbsp;
+                                            </div>
+
+
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-collateral col-lg-12 col-sm-12 col-xs-12">
+                        <div class="add_info">
+                            <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
+                                <li class="active"><a href="#reviews_tabs" data-toggle="tab">商品评论</a></li>
+                            </ul>
+                            <div id="productTabContent" class="tab-content">
+                                <div class="box-collateral box-reviews" id="customer-reviews">
+                                    <div class="box-reviews1">
+                                        <div class="form-add">
+                                            <form id="review-form" method="post">
+                                                <h3>参与商品评论</h3>
+                                                <fieldset>
+                                                    <h4>您如何评价这个商品? <em class="required">*</em></h4>
+                                                    <span id="input-message-box"></span>
+                                                    <table id="product-review-table" class="data-table">
+                                                        <thead>
+                                                        <tr class="first last">
+                                                            <th>&nbsp;</th>
+                                                            <th><span class="nobr">1 *</span></th>
+                                                            <th><span class="nobr">2 *</span></th>
+                                                            <th><span class="nobr">3 *</span></th>
+                                                            <th><span class="nobr">4 *</span></th>
+                                                            <th><span class="nobr">5 *</span></th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr class="first odd">
+                                                            <th>请您对此商品评分</th>
+                                                            <td class="value"><input type="radio" class="radio" value="11" id="Price_1" name="ratings[3]" /></td>
+                                                            <td class="value"><input type="radio" class="radio" value="12" id="Price_2" name="ratings[3]" /></td>
+                                                            <td class="value"><input type="radio" class="radio" value="13" id="Price_3" name="ratings[3]" /></td>
+                                                            <td class="value"><input type="radio" class="radio" value="14" id="Price_4" name="ratings[3]" /></td>
+                                                            <td class="value last"><input type="radio" class="radio" value="15" id="Price_5" name="ratings[3]" /></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="review2">
+                                                        <ul>
+                                                            <li><label class="required " for="review_field">请给我们宝贵的评价<em>*</em></label>
+                                                                <div class="input-box">
+                                                                    <textarea rows="3" cols="5" id="review_field" name="detail"></textarea>
+                                                                </div></li>
+                                                        </ul>
+                                                        <div class="buttons-set">
+                                                            <button class="button submit"  title="Submit Review" type="button"><span id="Review">提交评价</span></button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                </div>
+
+
+
+
+                                <!-- 商品评价 -->
+                                <div class="tab-pane fade" id="reviews_tabs">
+                                        </div>
+                                        <div class="box-reviews2">
+                                            <h3>用户评论</h3>
+                                            <div class="box visible" th:each="dis,d:${session.dislist}">
+                                                <ul>
+                                                    <li>
+                                                        <table class="ratings-table">
+                                                            <tbody>
+                                                            <tr>
+                                                                <th>评分</th>
+                                                                <!--  25为差评  60为中评  100为好评  -->
+                                                                <td>
+                                                                    <div class="rating-box" th:if="${dis.getGradeid() eq 3}">
+                                                                        <div class="rating width25"></div>
+                                                                    </div>
+                                                                    <div class="rating-box" th:if="${dis.getGradeid() eq 2}">
+                                                                        <div class="rating width60"></div>
+                                                                    </div>
+                                                                    <div class="rating-box" th:if="${dis.getGradeid() eq 1}">
+                                                                        <div class="rating width100"></div>
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="review">
+                                                            <h6><a href="#" th:text="${dis.getLoginname()}"></a></h6>
+                                                            <small>评价时间 <span>| </span><span th:text="${dis.getDistime()}"></span></small>
+                                                            <div class="review-txt" th:text="${dis.getMerchant()}">
+                                                            </div>
+                                                        </div></li>
+                                                </ul>
+                                            </div>
+                                            <div class="actions">
+                                                <a class="button view-all" id="revies-button" href="#"><span><span>查看更多评价</span></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Main Container End -->
+    <!-- Related Products Slider -->
+    <div class="container">
+        <!-- Related Slider -->
+        <div class="related-pro">
+            <div class="slider-items-products">
+                <div class="related-block">
+                    <div id="related-products-slider" class="product-flexslider hidden-buttons">
+                        <div class="home-block-inner">
+                            <div class="block-title">
+                                <h2>相关<br /><em>田园产品</em></h2>
+                            </div>
+                            <div class="pretext">
+                                <br/>
+                                    生活小农场，生活大田园！<br/>
+                                　　从田间到餐桌的零距离服务。<br/>
+                                     生态与厨房0距离<br/>
+                                　　营养更健康，速配快乐享。<br/>
+                                　　Brezza，您的私家农场。<br/>
+                            </div>
+                            <a href="grid.html" class="view_more_bnt">查看更多。。</a>
+                        </div>
+                        <div class="slider-items slider-width-col4 products-grid block-content" >
+
+
+                            <!-- Item -->
+                            <div class="item" th:each="reco,rstat:${session.recolist}">
+                                <div class="item-inner">
+                                    <div class="item-img">
+                                        <div class="item-img-info">
+                                            <a class="product-image" title="Retis lapen casen" th:href="@{'../commDetails?cid='+${reco.commid}}"><img alt="Retis lapen casen" th:attr="src=${reco.commimg}" /></a>
+                                            <div class="box-hover">
+                                                <ul class="add-to-links">
+                                                    <li><a class="link-wishlist" href="wishlist.html">My Love</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="info-inner">
+                                            <div class="item-title">
+                                                <a title="Retis lapen casen" th:href="@{'../commDetails?cid='+${reco.commid}}" th:text="${reco.commname}">Retis lapen casen</a>
+                                            </div>
+                                            <div class="item-content">
+
+                                                <div class="item-price">
+                                                    <div class="price-box">
+                                                        <span class="regular-price"><span class="price" style="color: red">¥:</span><span class="price" th:text="${reco.price}"></span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="action">
+                                                    <button class="button btn-cart" type="button"><span>类似鲜品 点击购买</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End related products Slider -->
+    </div>
+    <!-- Related Products Slider End -->
+    <!-- Footer -->
+    <script type="text/javascript">
+        document.write(footer.import.body.innerHTML);
+    </script>
+    <!-- End Footer -->
+</div>
+<!-- End page -->
+<!-- JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.mobile-menu.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/cloud-zoom.js"></script>
+<script type="text/javascript">
+    var parid=0;//商品参数
+        function test(p) {
+            parid=p;
+            $.post("../parFadeById",{"pid":p},function (e) {
+                $("#minprice a").text(e.price);
+                $("#maxprice").hide();
+                $("#kucun").text(e.stocknum);
+                if(e.stocknum>0){
+                    $("#yeshave").show();
+                    $("#btncar").show();
+                }else{
+                    $("#yeshave").hide();
+                    $("#btncar").hide();
+                }
+            })
+        }
+
+        $(function(){
+
+            $("#btncar").click(function(){
+                if(parid==0){
+                    alert("请先选择商品的详细参数哦！");
+                }else{
+                    window.location = "../insertCar?commsum=" + $("#qty").val() + "&parameterid=" + parid;
+                }
+
+            })
+        })
+
+</script>
+</body>
+</html>

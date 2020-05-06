@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicons Icon -->
+    <title>Brezza</title>
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/revslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link href="css/ac2ae5775c664fb682a6b10e460efad2.css" rel="stylesheet" />
+    <!-- 引入底部 -->
+    <link rel="import" href="footer.html" id="footer">
+</head>
+<body>
+<div id="page">
+    <!-- header -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- Header Language -->
+                        <div class="col-xs-12 col-sm-6">
+
+                        </div>
+                        <div class="col-xs-6 hidden-xs">
+                            <!-- Header Top Links -->
+                            <div class="toplinks">
+                                <div class="links">
+                                    <div class="login">
+                                        <a href="login.html"><span class="hidden-xs">登陆/切换用户</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Header Top Links -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo-block">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a title="Brezza" href="index.html"><img alt="Brezza Logo" src="picture/logo.png" /></a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- 上方搜索框 -->
+                    <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+                        <div class="search-box">
+                            <form action="cat" method="POST" id="search_mini_form" name="Categories">
+                                <input type="text" placeholder="查找更多..." maxlength="70" name="search" id="search" />
+                                <button type="button" id="commbtn" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 mgk-top-cart">
+
+                        <div class="top-cart-contain pull-right">
+
+
+                            <!-- Top Cart -->
+                            <!-- 购物车 -->
+                            <div class="mini-cart">
+                                <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+                                    <a href="shopping_cart.html"><span class="cart_count"></span><span class="cart-title hidden-xs hidden-sm">我的 car/</span>
+                                        <span class="price hidden-xs">￥金额</span></a>
+                                </div>
+                                <div>
+                                    <div class="top-cart-content">
+                                        <ul class="mini-products-list" id="cart-sidebar" >
+
+
+                                            <li class="item" th:each="car,carstat:${session.carlist}">
+                                                <div class="item-inner">
+                                                    <a class="product-image" title="Retis lapen casen" th:href="@{'../commDetails?cid='+${car.commid}}">
+                                                        <img alt="Retis lapen casen" th:attr="src=${car.commimg}" /></a>
+                                                    <div class="product-details">
+                                                        <div class="access">
+                                                            <a class="btn-remove1" title="Remove This Item" th:attr="id='car'+${car.mycarid}" th:onclick="|del(${car.mycarid})|">
+                                                                删除该商品</a>
+                                                        </div>
+                                                        <strong th:text="${car.commsum}"></strong>份
+
+                                                        <span style="color: red">￥</span><span class="price" th:text="${car.price}"></span>
+                                                        <p class="product-name"><a th:href="@{'../commDetails?cid='+${car.commid}}" th:text="${car.commname}"></a></p>
+                                                    </div>
+                                                </div></li>
+
+
+                                        </ul>
+                                        <div class="actions">
+                                            <a href="../insertCar" class="view-cart"><i class="fa fa-shopping-cart"></i><span>查看我的购物车</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--购物车结束 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="mm-toggle-wrap">
+                    <div class="mm-toggle">
+                        <i class="fa fa-align-justify"></i>
+                        <span class="mm-label">Menu</span>
+                    </div>
+                </div>
+
+
+                <!--  头部导航栏  -->
+                <div class="nav-inner" id="app">
+                    <ul id="nav" class="hidden-xs" th:each="verify,v:${session.dh}" style="display: inline-block">
+                        <!--  蔬菜  -->
+                        <li class="mega-menu" id="head" th:if="${verify.classifyid eq verify.fatherid}">
+                            <!-- 根据分类进行查询未添加 -->
+                            <a class="level-top"><span th:text="${verify.classifyname}">  </span></a>
+                            <div class="level0-wrapper dropdown-6col" style="margin-right: 200px">
+                                <div class="container">
+                                    <div class="level0-wrapper2">
+                                        <div class="nav-block nav-block-center">
+                                            <ul class="level0" >
+                                                <li class="level3 parent item"><a href="../mumeFall"><span>Brezza</span></a>
+                                                    <ul class="level1" th:each="ver,v:${session.dh}">
+                                                        <li th:if="${verify.classifyid eq ver.fatherid&&ver.classifyid != ver.fatherid}">
+                                                            <a th:href="@{'../comm_by_classifyid?classifyid='+${ver.classifyid}}">
+                                                                <span th:text="${ver.classifyname}"></span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End nav -->
+    </header>
+    <!-- Slider -->
+
+    <div id="magik-slideshow" class="magik-slideshow">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div id="rev_slider_4_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
+                        <div id="rev_slider_4" class="rev_slider fullwidthabanner">
+                            <ul>
+                                <li data-transition="slideleft" data-slotamount="7" data-masterspeed="1000" data-thumb="images/slide-img1.jpg"><img src="picture/slide-img1.jpg" alt="slide-img" data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                                    <div class="info">
+                                        <div class="tp-caption ExtraLargeTitle sft  tp-resizeme " data-endspeed="500" data-speed="500" data-start="1100" data-easing="Linear.easeNone" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index:2;white-space:nowrap;">
+                                            <span>Modern Design</span>
+                                        </div>
+                                        <div class="tp-caption LargeTitle sfl  tp-resizeme " data-endspeed="500" data-speed="500" data-start="1300" data-easing="Linear.easeNone" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index:3;white-space:nowrap;">
+                                            <span>Season Sale</span>
+                                        </div>
+                                        <div class="tp-caption Title sft  tp-resizeme " data-endspeed="500" data-speed="500" data-start="1450" data-easing="Power2.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index:4;white-space:nowrap;">
+                                            In augue urna, nunc, tincidunt, augue, augue facilisis facilisis.
+                                        </div>
+                                        <div class="tp-caption sfb  tp-resizeme " data-endspeed="500" data-speed="500" data-start="1500" data-easing="Linear.easeNone" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index:4;white-space:nowrap;">
+                                            <a href="#" class="buy-btn">Shop Now</a>
+                                        </div>
+                                    </div></li>
+                                <li data-transition="slideright" data-slotamount="7" data-masterspeed="1000" data-thumb="images/slide-img2.jpg"><img src="picture/slide-img2.jpg" alt="slide-img" data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                                    <div class="info">
+                                        <div class="tp-caption ExtraLargeTitle sft slide2  tp-resizeme " data-endspeed="500" data-speed="500" data-start="1100" data-easing="Linear.easeNone" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index:2;white-space:nowrap;padding-right:0px">
+                                            <span>Mega Sale</span>
+                                        </div>
+                                        <div class="tp-caption LargeTitle sfl  tp-resizeme " data-endspeed="500" data-speed="500" data-start="1300" data-easing="Linear.easeNone" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index:3;white-space:nowrap;">
+                                            Go Lightly
+                                        </div>
+                                        <div class="tp-caption Title sft  tp-resizeme " data-endspeed="500" data-speed="500" data-start="1500" data-easing="Power2.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index:4;white-space:nowrap;">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </div>
+                                        <div class="tp-caption sfb  tp-resizeme " data-endspeed="500" data-speed="500" data-start="1500" data-easing="Linear.easeNone" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index:4;white-space:nowrap;">
+                                            <a href="#" class="buy-btn">Buy Now</a>
+                                        </div>
+                                    </div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 col-mid">
+                    <div class="col-inner ">
+                        <div class="img-block">
+                            <a href="#">
+                                <div class="banner-details">
+                                    <div class="banner-sub-title">
+                                        Fresh
+                                    </div>
+                                    <div class="banner-title">
+                                        Organic Fruits
+                                    </div>
+                                </div><img src="picture/organic-fruits.jpg" alt="Organic Fruits" /></a>
+                        </div>
+                        <div class="img-block1">
+                            <a href="#">
+                                <div class="banner-details">
+                                    <div class="banner-sub-title">
+                                        100%
+                                    </div>
+                                    <div class="banner-title">
+                                        Healthy Foods
+                                    </div>
+                                </div><img src="picture/healthy-foods.jpg" alt="Healthy Foods" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 col-right">
+                    <div class="image-item">
+                        <a href="#">
+                            <div class="banner-details">
+                                <div class="banner-title">
+                                    Best Price Always
+                                </div>
+                                <div class="line"></div>
+                                <div class="banner-sub-title">
+                                    Our Delisious Food at Your Doorstep!
+                                </div>
+                            </div><img src="picture/best-price-always.jpg" class="img-responsive" alt="Best Price Always" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Slider -->
+
+
+
+
+    <!-- Content Page -->
+    <div class="content-page">
+        <div class="container">
+            <div class="row">
+                <!-- 热卖抢购 -->
+                <div class="col-md-3 col-xs-12 hot-deal">
+                    <ul class="products-grid">
+                        <li class="right-space two-height item">
+                            <div class="item-inner">
+                                <div class="item-img">
+                                    <div class="item-img-info">
+                                        <a href="" title="Retis lapen casen" class="product-image"><img src="picture/product12.jpg" alt="Retis lapen casen" /></a>
+                                        <div class="hot-label hot-top-right">
+                                            Hot
+                                        </div>
+                                        <div class="box-hover">
+                                            <ul class="add-to-links">
+                                                <li><a class="link-wishlist" href="wishlist.html">Mylove</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="box-timer">
+                                            <div class="countbox_1 timer-grid"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-info">
+                                    <div class="info-inner">
+                                        <div class="item-title">
+                                            <a href="product_detail.html" title="Retis lapen casen">叙利亚红石榴</a>
+                                        </div>
+                                        <div class="item-content">
+
+                                            <div class="item-price">
+                                                <div class="price-box">
+                                                    <span class="regular-price"><span class="price">￥12.50</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+
+
+                        <li class="right-space two-height item">
+                            <div class="item-inner">
+                                <div class="item-img">
+                                    <div class="item-img-info">
+                                        <a href="" title="Retis lapen casen" class="product-image"><img src="picture/product13.jpg" alt="Retis lapen casen" /></a>
+                                        <div class="hot-label hot-top-right">
+                                            Hot
+                                        </div>
+                                        <div class="box-hover">
+                                            <ul class="add-to-links">
+                                                <li><a class="link-wishlist" href="wishlist.html">Mylove</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="box-timer">
+                                            <div class="countbox_1 timer-grid"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-info">
+                                    <div class="info-inner">
+                                        <div class="item-title">
+                                            <a href="product_detail.html" title="Retis lapen casen">巨神峰葡萄</a>
+                                        </div>
+                                        <div class="item-content">
+
+                                            <div class="item-price">
+                                                <div class="price-box">
+                                                    <span class="regular-price"><span class="price">￥16.80</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></li>
+                    </ul>
+                </div>
+                <!--热卖抢购结束-->
+
+
+
+                <!-- 最新上架商品 -->
+             <div class="col-md-9 col-xs-12">
+                    <div class="category-product">
+                        <div class="navbar nav-menu">
+                            <div class="navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <div class="new_title">
+                                            <h2><strong>New</strong>最新上架</h2>
+                                        </div></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-bestseller">
+                            <div class="product-bestseller-content">
+                                <div class="product-bestseller-list">
+                                    <div class="tab-container">
+                                        <div class="tab-panel active" id="tab-1">
+                                            <div class="category-products">
+                                                <ul class="products-grid" th:each="comm,commStat:${session.show}">
+
+
+                                                    <li class="item col-md-3 col-sm-4 col-xs-12">
+                                                        <div class="item-inner">
+                                                            <div class="item-img">
+                                                                <div class="item-img-info">
+                                                                    <a class="product-image" title="Retis lapen casen" th:href="@{'../commDetails?cid='+${comm.commid}}"><img alt="Retis lapen casen" th:attr="src=${comm.commimg}"  /></a>
+                                                                    <div class="box-hover">
+
+                                                                        <ul class="add-to-links">
+                                                                            <li><a class="link-wishlist" th:href="@{'../myLove?cid='+${comm.commid}}">My Love</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="item-info">
+                                                                <div class="info-inner">
+                                                                        <div class="info-inner">
+                                                                            <div class="item-title">
+                                                                                <a th:href="@{'../commDetails?cid='+${comm.commid}}" title="Retis lapen casen" th:text="${comm.commname}"></a>
+                                                                            </div>
+
+                                                                    <div class="item-content">
+
+                                                                        <div class="item-price">
+                                                                            <div class="price-box">
+                                                                                <span class="regular-price"> <span class="price" style="color: red">¥:</span><span class="price" th:text="${comm.price}"></span></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="action">
+                                                                            <a th:href="@{'../commDetails?cid='+${comm.commid}}">
+                                                                                <button class="button btn-cart" type="button"><span>添加到 My Cart</span></button></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 最新商品结束 -->
+    <!-- 热销商品-->
+    <section class="bestsell-pro">
+        <div class="container">
+            <div class="block-title">
+                <h2>畅销单品</h2>
+            </div>
+            <div class="slider-items-products">
+                <div class="bestsell-block">
+                    <div id="bestsell-slider" class="product-flexslider hidden-buttons">
+                        <div class="slider-items slider-width-col4 products-grid block-content">
+
+                            <div class="item" th:each="sales,salesStat:${session.salesShow}">
+                                <div class="item-inner">
+                                    <div class="item-img">
+                                        <div class="item-img-info">
+                                            <a class="product-image" title="Retis lapen casen" th:href="@{'../commDetails?cid='+${sales.commid}}">
+                                                <img alt="Retis lapen casen" th:attr="src=${sales.commimg}" /></a>
+                                            <div class="box-hover">
+                                                <ul class="add-to-links">
+
+                                                    <li><a class="link-wishlist" th:href="@{'../myLove?cid='+${sales.commid}}">My Love</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="info-inner">
+                                            <div class="item-title">
+                                                <a title="Retis lapen casen"  th:text="${sales.commname}"></a>
+                                            </div>
+
+                                            <div class="item-content">
+                                                <div class="item-price">
+                                                    <div class="price-box">
+                                                        <span class="regular-price"> <span class="price" style="color: red">¥:</span><span class="price" th:text="${sales.price}"></span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="action">
+                                                    <a  th:href="@{'../commDetails?cid='+${sales.commid}}">
+                                                        <button class="button btn-cart" type="button"><span>添加到 My Cart</span></button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 当季热销结束 -->
+
+
+
+
+    <!-- 特色产品 -->
+    <section class="featured-pro">
+        <div class="container">
+            <div class="slider-items-products">
+                <div class="featured-block">
+                    <div id="featured-slider" class="product-flexslider hidden-buttons">
+                        <div class="home-block-inner">
+                            <div class="block-title">
+                                <h2>农场精选</h2>
+                            </div>
+                            <div class="pretext">
+                                生态风情,田园韵味<br/>
+                                天然绿色,自然出色<br/>
+                                珍韵冠驰,生态之享<br/>
+                                自然成就印象,美味铸就珍韵<br/>
+                                交香辉“印”,货灵货鲜<br/>
+                                Brezza邀您品味更多<br/>
+                            </div>
+                        </div>
+                        <div class="slider-items slider-width-col4 products-grid block-content" >
+
+
+
+                            <div class="item" th:each="sales,salesStat:${session.salesShow}">
+                                <div class="item-inner">
+                                    <div class="item-img">
+                                        <div class="item-img-info">
+                                            <a class="product-image" title="Retis lapen casen" th:href="@{'../commDetails?cid='+${sales.commid}}">
+                                                <img alt="Retis lapen casen" th:attr="src=${sales.commimg}" /></a>
+                                            <div class="box-hover">
+                                                <ul class="add-to-links">
+                                                    <li><a class="link-wishlist" th:href="@{'../myLove?cid='+${sales.commid}}">My Love</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="info-inner">
+                                            <div class="item-title">
+                                                <a title="Retis lapen casen" th:href="@{'../commDetails?cid='+${sales.commid}}" th:text="${sales.commname}"></a>
+                                            </div>
+                                            <div class="item-content">
+                                                <div class="item-price">
+                                                    <div class="price-box">
+                                                        <span class="regular-price"><span class="price" style="color: red">¥:</span><span class="price" th:text="${sales.price}"></span>                                                    </div>
+                                                </div>
+                                                <div class="action">
+                                                    <a  th:href="@{'../commDetails?cid='+${sales.commid}}"><button class="button btn-cart" type="button"><span>添加到 My Cart</span></button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Featured Product Section -->
+    <!-- Banner Section -->
+
+    <!-- Brand Logo Section -->
+
+    </div>
+    <!-- End Brand Logo Section -->
+    <!-- Footer -->
+    <script type="text/javascript">
+        document.write(footer.import.body.innerHTML);
+    </script>
+    <!-- End Footer -->
+</div>
+<!-- End page -->
+<!-- mobile menu -->
+
+<!-- JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.mobile-menu.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/revslider.js"></script>
+<script src="js/countdown.js"></script>
+<!-- Hot Deals Timer 1-->
+<script>
+
+
+    function del(cid) {
+        var car="car"+cid;
+        if(confirm("确定要删除这件商品吗？？？")){
+            $.post("../delCar",{"cid":cid},function (e) {
+                if(e=="no"){
+                    alert("对不起，商品删除失败！！！");
+                }else{
+                    $("#summoney").text(e);
+                    $("#"+(car)).parent().parent().parent().parent().remove();
+                }
+            })
+        }
+    }
+
+    $("#commbtn").click(function(){
+            alert($("#search").val());
+            location.href="../comm_Fade_ByName?c_name="+$("#search").val()+"";
+    })
+</script>
+</body>
+</html>

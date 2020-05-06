@@ -6,25 +6,41 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="comm" />
         <module name="hema_commodity_provider8805" />
-        <module name="hema_provider8803" />
+        <module name="comm" />
+        <module name="commodity-6662" />
         <module name="hema_commodity_consumer8806" />
+        <module name="hemauser-6661" />
+        <module name="hema-index" />
+        <module name="order-6663" />
+        <module name="hema_provider8803" />
+        <module name="common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="comm" target="1.8" />
+      <module name="commodity-6662" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="hema-index" target="1.8" />
       <module name="hema_commodity_consumer8806" target="1.8" />
       <module name="hema_commodity_provider8805" target="1.8" />
+      <module name="hema_order_provider8804" target="1.8" />
       <module name="hema_provider8803" target="1.8" />
+      <module name="hemauser-6661" target="1.8" />
+      <module name="order-6663" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="comm" options="-parameters" />
+      <module name="commodity-6662" options="-parameters" />
+      <module name="hema-index" options="-parameters" />
       <module name="hema_commodity_consumer8806" options="-parameters" />
       <module name="hema_commodity_provider8805" options="-parameters" />
+      <module name="hema_order_provider8804" options="-parameters" />
       <module name="hema_provider8803" options="-parameters" />
+      <module name="hemauser-6661" options="-parameters" />
+      <module name="order-6663" options="-parameters" />
     </option>
   </component>
 </project>

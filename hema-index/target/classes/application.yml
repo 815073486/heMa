@@ -1,0 +1,25 @@
+server:
+  port: 6660
+spring:
+  application:
+    name: nacos-hemaindex
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  thymeleaf:
+    cache: false
+    prefix: classpath:/static/
+    suffix: .html
+    encoding: utf-8
+  mvc:
+    async:
+      request-timeout: 20000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

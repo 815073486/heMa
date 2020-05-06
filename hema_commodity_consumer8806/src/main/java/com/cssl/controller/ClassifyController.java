@@ -3,6 +3,8 @@ package com.cssl.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.cssl.client.ClassifyClient;
 import com.cssl.entity.*;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -60,14 +62,16 @@ public class ClassifyController {
         Map<String,Object> map=new HashMap<>();
         JSONObject resUrl = new JSONObject();
         //上传文件路径
-        String path = "F:/heMa/hema_commodity_consumer8806/src/main/resources/static/picture";
+        String path = "F:/heMa/hema_commodity_consumer8806/target/classes/static/picture";
+        String path2="F:/heMa/hema-index/target/classes/static/picture";
         //上传文件名
         String name = file.getOriginalFilename();//上传文件的真实名称
         String suffixName = name.substring(name.lastIndexOf("."));//获取后缀名
         String indexName = name.substring(0,name.lastIndexOf("."));//获取文件名
         File filepath = new File(path, name);
         File tempFile = new File(path + File.separator + name);
-        file.transferTo(tempFile);
+        File tempFile2 = new File(path2 + File.separator + name);
+        file.transferTo(tempFile2);
         resUrl.put("src", file.getOriginalFilename());
         map.put("code", 0);
         map.put("msg", "");
@@ -80,6 +84,7 @@ public class ClassifyController {
      */
     @RequestMapping("/consumer/savCommodity")
     public int savCommodity(@RequestParam Map<String,String> reqMap){
+        int s=0;
         //创建商品
         Commodity commodity=new Commodity();
         if(reqMap.get("fatherid")==null){
@@ -95,9 +100,7 @@ public class ClassifyController {
         }else{
             commodity.setRush(0);
         }
-
         commodity.setPresentation(reqMap.get("presentation"));
-
         //商品参数对象
         Parameter parameter=new Parameter();
         parameter.setParameter(reqMap.get("parameter"));
@@ -115,17 +118,16 @@ public class ClassifyController {
                     for (int i=0;i<images.length;i++){
                         Commimg commimg=new Commimg();
                         commimg.setCommid(commid1);
-                        commimg.setImg(images[i]);
+                        commimg.setImg("commimg/"+images[i]);
+                        System.out.println("*********"+i);
                         if(client.savCommimg(commimg)>0){
-                            return 200;
+                            s=200;
                         }
                     }
-                    return 2;
                 }
             }
-            return 0;
         }
-        return 1;
+        return s;
     }
 
     /**
@@ -138,19 +140,6 @@ public class ClassifyController {
         return 0;
     }
 
-    /**
-     * 查询所有商品
-     * @return
-     */
-    @RequestMapping("/consumer/fallCommodity")
-    public Map<String,Object> fallCommodity(){
-        List<Map<String,Object>> list=client.selectCommodity();
-        Map<String,Object> map=new HashMap<>();
-        map.put("code",0);
-        map.put("count",list.size());
-        map.put("data",list);
-        return map;
-    }
 
     /**
      * 查询单个商品
@@ -167,7 +156,6 @@ public class ClassifyController {
      */
     @RequestMapping("/consumer/updateCommodity")
     public int updateCommodity(@RequestParam Map<String,String> map){
-        System.out.println(map+"&&&&&&&&&&&");
         Commodity commodity=new Commodity();
         commodity.setCommname(map.get("commname"));
         commodity.setCommid(Integer.parseInt(map.get("commid")));
@@ -235,15 +223,29 @@ public class ClassifyController {
      * @return
      */
     @RequestMapping("/consumer/advancedSelectCommodity")
-    public Map<String,Object> advancedSelectCommodity(@RequestParam Map<String,Object> map){
-        if(map.get("commtime")!=""){
+    public Map<String,Object> advancedSelectCommodity(@RequestParam Map<String,Object> map,Integer page,Integer pageindex){
+        if(map.get("commtime")!=""&&map.get("commtime")!=null){
             map.put("commtime",map.get("commtime")+"%");
         }
+        if(map.get("commid")==null||map.get("commid")==""){
+            map.put("commid",0);
+        }
+
+        if(page==null){
+            page=1;
+        }
+        if(pageindex==null){
+            pageindex=10;
+        }
+        map.put("page",(page-1)*pageindex);
+        map.put("pageindex",pageindex);
+        PageHelper.startPage(Integer.parseInt(map.get("page").toString()),Integer.parseInt(map.get("pageindex").toString()));
         List<Map<String,Object>> list=client.advancedSelectCommodity(map);
-        map.put("code",0);
-        map.put("count",list.size());
-        map.put("data",list);
-        return map;
+        Map<String,Object> map1=new HashMap<>();
+        map1.put("code",0);
+        map1.put("count",client.commodityConut());
+        map1.put("data",list);
+        return map1;
     }
 
 }

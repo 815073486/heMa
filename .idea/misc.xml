@@ -6,14 +6,15 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/hema-index/pom.xml" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/hemauser-6661/pom.xml" />
-        <option value="$PROJECT_DIR$/commodity-6662/pom.xml" />
         <option value="$PROJECT_DIR$/comm/pom.xml" />
         <option value="$PROJECT_DIR$/hema_provider8803/pom.xml" />
         <option value="$PROJECT_DIR$/hema_commodity_provider8805/pom.xml" />
         <option value="$PROJECT_DIR$/hema_commodity_consumer8806/pom.xml" />
+        <option value="$PROJECT_DIR$/commodity-6662/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/hema-index/pom.xml" />
+        <option value="$PROJECT_DIR$/hemauser-6661/pom.xml" />
+        <option value="$PROJECT_DIR$/order-6663/pom.xml" />
       </list>
     </option>
   </component>

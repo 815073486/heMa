@@ -263,7 +263,7 @@
                 });
 
                 //监听提交
-                form.on('submit(login)', function(data){
+               form.on('submit(login)', function(data){
                     var s=$("form").serialize()+"&img="+valData;
                     $.ajax({
                         url:"consumer/savCommodity",
@@ -273,6 +273,9 @@
                         success:function (data) {
                             if(data==200){
                                 layer.msg("商品添加成功！")
+                                var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                                parent.layer.close(index);
+                                parent.tablepage.reload();
                             }else if(data==0){
                                 layer.msg("商品参数添加失败！")
                             }else if(data==2){
@@ -314,7 +317,7 @@
                     })
                 form.on('select(xmFilter)',function (data) {
                     var sex= data.value;                                   //获取value值
-                    var text= data.elem[data.elem.selectedIndex].text;;    //获取显示的值
+                    var text= data.elem[data.elem.selectedIndex].text;    //获取显示的值
                     $.ajax({
                         url:'consumer/classifyId?fatherid='+sex,            //二级分类
                         dataType: 'json',

@@ -1,0 +1,36 @@
+server:
+  port: 6661
+
+spring:
+  application:
+    name: user-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr:  127.0.0.1:8848
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///hemauser
+    username: root
+    password: root
+
+mybatis:
+  type-aliases-package: com.hemauser
+  configuration:
+    auto-mapping-behavior: full
+    use-generated-keys: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  page-size-zero: true
+
+

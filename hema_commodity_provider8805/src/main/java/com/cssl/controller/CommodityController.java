@@ -30,15 +30,7 @@ public class CommodityController {
         return commid;
     }
 
-    /**
-     * 查询所有商品
-     * @return
-     */
-    @RequestMapping("/commodity")
-    public List<Map<String,Object>> selectCommodity(){
 
-        return cService.selectCommodity();
-    }
 
     /**
      * 查询单个商品
@@ -78,8 +70,16 @@ public class CommodityController {
      */
     @RequestMapping("/advancedSelectCommodity")
     public List<Map<String, Object>> advancedSelectCommodity(@RequestParam Map<String,Object> map){
-
+        System.out.println(map.get("page")+"****************"+map.get("pageindex"));
         return cService.advancedSelectCommodity(map);
     }
 
+    /**
+     * 查看商品总数
+     * @return
+     */
+    @RequestMapping("/commodityCount")
+    public int commodityConut(){
+        return cService.commodityConut();
+    }
 }

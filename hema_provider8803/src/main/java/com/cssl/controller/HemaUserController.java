@@ -1,6 +1,6 @@
 package com.cssl.controller;
 
-import com.cssl.entity.HemaUser;
+import com.cssl.entity.Hemauser;
 import com.cssl.service.HemaUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +23,7 @@ public class HemaUserController {
     }
 
     @RequestMapping("/updateHemaUser")
-    public int updateHemaUser(@RequestBody HemaUser hemaUser){
+    public int updateHemaUser(@RequestBody Hemauser hemaUser){
         return hService.updateHemaUser(hemaUser);
     }
 

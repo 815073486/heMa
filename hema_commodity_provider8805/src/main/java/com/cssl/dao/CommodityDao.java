@@ -10,9 +10,11 @@ import java.util.Map;
 
 @Mapper
 public interface CommodityDao extends BaseMapper<Commodity> {
-    public List<Map<String,Object>> selectCommodity();
+
 
     public Map<String,Object> commodity(Map<String,Object> map);
 
     public List<Map<String,Object>> advancedSelectCommodity(Map<String,Object> map);
+
+    public int commodityConut();
 }

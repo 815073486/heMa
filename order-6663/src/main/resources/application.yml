@@ -1,0 +1,36 @@
+server:
+  port: 6663
+
+spring:
+  application:
+    name: order-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr:  127.0.0.1:8848
+
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///hemauser
+    username: root
+    password: root
+
+
+mybatis:
+  type-aliases-package: com.hemacommodity
+  configuration:
+    auto-mapping-behavior: full
+    use-generated-keys: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  page-size-zero: true

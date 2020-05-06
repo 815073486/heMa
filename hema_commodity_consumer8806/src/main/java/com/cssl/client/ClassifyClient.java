@@ -44,11 +44,6 @@ public interface ClassifyClient {
 
 
 
-    /**
-     * 查询所有商品
-     */
-    @RequestMapping("/commodity")
-    public List<Map<String,Object>> selectCommodity();
 
     /**
      * 查询单个商品
@@ -133,5 +128,10 @@ public interface ClassifyClient {
     @RequestMapping("/advancedSelectCommodity")
     public List<Map<String, Object>> advancedSelectCommodity(@RequestParam Map<String,Object> map);
 
-
+    /**
+     * 查看商品总数
+     * @return
+     */
+    @RequestMapping("/commodityCount")
+    public int commodityConut();
 }

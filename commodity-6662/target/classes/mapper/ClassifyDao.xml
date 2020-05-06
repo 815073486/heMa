@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.dao.ClassifyDao">
+    <select id="mumeFall" resultType="Classify">
+       SELECT * FROM `classify`
+   </select>
+
+    <select id="indexFall" resultType="Map">
+        SELECT a.`commid`,`commname`,`rush`,`commimg`,`price`  FROM `commodity` AS a INNER JOIN `parameter` AS b
+        ON(a.`commid`=b.`commid`)
+        GROUP BY b.`commid`
+        ORDER BY commtime DESC
+        LIMIT 0,8
+    </select>
+    
+    <select id="salesFall" resultType="Map">
+        SELECT a.`commid`,`commname`,`rush`,`commimg`,`price`,`sales`  FROM `commodity` AS a INNER JOIN `parameter` AS b
+        ON(a.`commid`=b.`commid`)
+        GROUP BY b.`commid`
+        ORDER BY sales DESC
+        LIMIT 0,20
+    </select>
+
+    <select id="comm_Fade_ByName" resultType="Map">
+         SELECT a.`commid`,`commname`,`rush`,`commimg`,`price`  FROM `commodity` AS a INNER JOIN `parameter` AS b
+        ON(a.`commid`=b.`commid`)
+        WHERE commname like concat('%',#{c_name},'%')
+    </select>
+
+    <select id="comm_by_classifyid" resultType="Map">
+         SELECT a.`commid`,`commname`,`rush`,`commimg`,`price`  FROM `commodity` AS a INNER JOIN `parameter` AS b
+        ON(a.`commid`=b.`commid`)
+        WHERE `classifyid`=#{classifyid}
+    </select>
+
+    <update id="upt_Stocknum">
+        UPDATE `parameter` SET `stocknum`=`stocknum`-#{stocknum} WHERE `parameterid`=#{parameterid}
+    </update>
+    
+    <update id="upt_sales">
+    UPDATE `commodity` SET `sales`=`sales`+#{sales} WHERE `commid`=#{commid}
+    </update>
+</mapper>

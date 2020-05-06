@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.order.dao.OrderDao">
+    <insert id="insertOrder">
+        INSERT INTO `order`(`ordernum`,`loginname`,`addressid`)
+        VALUES(#{ordernum},#{loginname},#{addressid})
+    </insert>
+
+    <insert id="insert_Order_comm">
+      INSERT INTO `order_comm`(`ordernum`,`ordercommsum`,`odert_comm_summoney`,`commid`,`commname`,`commimg`,`loginname`)
+        VALUES(#{ordernum},#{ordercommsum},#{odert_comm_summoney},#{commid},#{commname},#{commimg},#{loginname});
+    </insert>
+
+    <select id="order_FadeAll" resultType="com.order.Order">
+        SELECT * FROM `order` WHERE `loginname`=#{loginname}  ORDER BY `ordertime` DESC
+    </select>
+
+    <select id="order_Comm_FadeAll" resultType="com.order.Order_Comm">
+        SELECT * FROM `order_comm` WHERE `loginname`=#{loginname}
+    </select>
+
+    <update id="upt_Order_State">
+            UPDATE `order` SET `stateid`=#{stateid} WHERE `orderid`=#{orderid}
+    </update>
+
+</mapper>

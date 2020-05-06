@@ -34,18 +34,7 @@
                 <div class="layui-col-md12">
                     <div class="layui-card">
                         <div class="layui-card-body ">
-                            <form class="layui-form layui-col-space5">
-                                <div class="layui-inline layui-show-xs-block">
-                                    <input class="layui-input" autocomplete="off" placeholder="开始日" name="start" id="start"></div>
-                                <div class="layui-inline layui-show-xs-block">
-                                    <input class="layui-input" autocomplete="off" placeholder="截止日" name="end" id="end"></div>
-                                <div class="layui-inline layui-show-xs-block">
-                                    <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input"></div>
-                                <div class="layui-inline layui-show-xs-block">
-                                    <button class="layui-btn" lay-submit="" lay-filter="sreach">
-                                        <i class="layui-icon">&#xe615;</i></button>
-                                </div>
-                            </form>
+
                         </div>
                         <div class="layui-card-body ">
                             <!-- 表格 -->
@@ -59,65 +48,29 @@
                 </div>
             </div>
         </div>
-        <div class="layui-row" id="popUpdateTest" style="display:none;">
+        <div class="layui-row" id="popUpdateTest" style="display: none">
             <div class="layui-col-md10">
-                <form style="margin-left: 150px;margin-top: 20px" class="layui-form layui-form-pane" lay-filter="dataFrm" >
+                <form style="margin-left: 20px;margin-top: 20px" class="layui-form layui-form-pane" lay-filter="dataFrm" >
                     <div class="layui-form-item">
                         <label class="layui-form-label">
                             <span class="x-red">*</span>用户名</label>
                         <div class="layui-input-inline">
-                            <input type="text"  name="loginname" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                            <input type="text" readonly="readonly" name="loginname" ay-verify="required" autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label  class="layui-form-label">
                             <span class="x-red">*</span>商家名称</label>
                         <div class="layui-input-inline select">
-                            <select id="shipping" name="fatherid" class="valid">
+                            <select id="shipping" name="statusid" class="valid">
                                 <option value=""></option>
                             </select>
                         </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label  class="layui-form-label">
-                            <span class="x-red">*</span>会员等级</label>
-                        <div class="layui-input-inline select">
-                            <input type="text" name="gradename" required="" lay-verify="checkbox" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label  class="layui-form-label">
-                            <span class="x-red">*</span>注册时间</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="joindate" required="" lay-verify="checkbox" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                        <div id="uploadQRcode" class="layui-upload">
-                            <button type="button" class="layui-btn" id="uploadQR">
-                                <i class="layui-icon"></i>商品图片<span style="color: red;font-size: 20px;">*</span>
-                            </button>
-                            <div class="layui-upload-list">
-                                <img id="qrshow" src="" alt="" class="layui-upload-img"
-                                     style="height: 100px;width:100px;border:1px solid black;">
-                            </div>
-                            <div id="startDiv">
-                                <button type="button" class="layui-btn" id="startUploadQR">开始上传</button>
-                            </div>
-                            <div style="color: #c2c2c2;margin:10px 0;">温馨提示: 每次最多上传一张图片, 单张图片的大小不超过2MB</div>
-                        </div>
-                        <input type="text" name="commimg" id="qrInput" style="display: none;" lay-verify="required">
-                        <input type="text" name="commid" id="commid" style="display: none;">
-                    </blockquote>
-                    <div class="layui-form-item">
-                        <label  class="layui-form-label" style="color: red">
-                            <span class="x-red">*</span>商品简介</label>
-                        <div class="layui-input-inline select">
-                            <textarea style="margin-left: 10px; width: 205px; height: 100px;" name="presentation"  lay-verify="required"></textarea>
-                        </div>
+                        <input type="text" id="statusid" style="display: none">
+                        <input type="text" id="userid" name="userid" style="display: none">
                     </div>
                     <div class="layui-form-item" id="update">
-                        <button class="layui-btn layui-btn-danger" lay-submit lay-filter="login" style="margin-left: 100px" type="submit">
+                        <button class="layui-btn layui-btn-danger" lay-submit lay-filter="update" style="margin-left: 100px" type="submit">
                             <i class="layui-icon"></i>修改</button>
                         <button class="layui-btn layui-btn-danger" lay-submit lay-filter="quxiao" style="margin-left: 40px" type="button">
                             <i class="layui-icon"></i>取消</button>
@@ -150,9 +103,10 @@
         });
     </script>
     <script>
-        layui.use('table',function() {
-            var table = layui.table;
-            table.render({
+        layui.use(['table','form'],function() {
+            var table = layui.table,
+                form = layui.form;
+            pageopen1=table.render({
                 elem:"#demo"
                 ,url: 'consumer/hemaUserFall' //数据接口
                 ,title: '前台用户表'
@@ -163,9 +117,10 @@
                     {type: 'checkbox', fixed: 'left'}
                     ,{field: 'userid', title: '用户编号', width:100,height: 200, sort: true,align:'center'}
                     ,{field: 'loginname', title: '用户名称', width:120,height: 200,align:'center'}
-                    ,{field: 'intergral', title: '用户积分',align:'center',height: 200, width: 120}
-                    ,{field: 'joindate', title: '注册时间',align:'center',height: 200, width:80}
-                    ,{field: 'gradename', title: '会员等级',align:'center',height: 200, width:180}
+                    ,{field: 'joindate', title: '注册时间',align:'center',height: 200, width:180,templet:function (data) {
+                            $("#statusid").val(data.statusid);
+                            return layui.util.toDateString(data.joindate)
+                        }}
                     ,{field: 'userstatus', title: '用户状态', align:'center',height: 200,width: 150}
                     ,{fixed: 'right', width: 200, align:'center',title: "操作", toolbar: '#barDemo'}
                     ]]
@@ -176,18 +131,71 @@
                 var data = obj.data //获得当前行数据
                     ,layEvent = obj.event; //获得 lay-event 对应的值
                 if(layEvent === 'del'){
-                    layer.confirm('真的删除行么', function(index){
+                    layer.confirm("是否删除该数据？",function (index) {
                         $.ajax({
-                            url:""
-                            ,
+                            url: "consumer/delHemaUser?userid=" + JSON.stringify(data.userid)
+                            , type: "post"
+                            , dataType: "json"
+                            , contentType: "application/json"
+                            , success: function (dda) {
+                                if (dda == 1) {
+                                    layer.msg("删除成功！")
+                                    obj.del()//删除该行
+                                } else {
+                                    layer.msg("删除失败！")
+                                }
+                            }
                         })
-                        layer.close(index);
-                    });
+                        layer.close(index)
+                    })
+/////////       表格编辑数据
                 } else if(layEvent === 'edit'){
-
+                    page=layer.open({
+                        //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+                        type: 1,
+                        title: "修改商品",
+                        area: ['450px', '250px'],
+                        content: $("#popUpdateTest"), //引用的弹出层的页面层的方式加载修改界面表单
+                        success:function (dda) {
+                            $.ajax({
+                                url:"consumer/userstatusFall"
+                                ,data:"post"
+                                ,dataType: "json"
+                                ,success:function (dda) {
+                                    if(dda!=null){
+                                        $.each(dda, function (index, item) {
+                                            $('#shipping').append(new Option(item.userstatus, item.statusid));// 下拉菜单里添加元素
+                                        });
+                                    }
+                                    $("#shipping").val($("#statusid").val());
+                                    $("#userid").val(data.userid);
+                                    form.render("select")
+                                }
+                            })
+                            form.val("dataFrm",data)
+                        }
+                    })
                 }
             })
-
+            form.on("submit(update)",function (data) {
+                var s = $("form").serialize();
+                    $.ajax({
+                         url:"consumer/updateHemaUser"
+                        ,type:"post"
+                        ,dataType:"json"
+                        ,data:s
+                        ,success:function (dda) {
+                            if(dda==1){
+                               layer.msg("修改成功！")
+                               layer.close(page)
+                               pageopen1.reload();
+                            }else{
+                                layer.msg("修改失败！")
+                            }
+                        }
+                    })
+                return false;
+            })
             //头工具栏事件
             table.on('toolbar(test)',
             function(obj) {
